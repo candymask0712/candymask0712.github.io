@@ -1,7 +1,9 @@
 ---
 title: "github.io 블로그 시작하기"
 excerpt: "GitHub Blog 서비스인 github.io 블로그 시작하기로 했다."
-
+toc: true
+toc_sticky: true
+toc_label: "페이지 컨텐츠 리스트"
 categories:
   - Blog
 tags:
