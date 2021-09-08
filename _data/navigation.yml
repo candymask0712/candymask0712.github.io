@@ -2,6 +2,8 @@
 main:
   # - title: "블로그 방문하기"
   #   url: https://devinlife.com/
+  - title: "Home"
+    url: https://candymask0712.github.io/
   - title: "About"
     url: /about/
   - title: "Categories"
