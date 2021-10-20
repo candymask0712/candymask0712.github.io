@@ -107,6 +107,16 @@ last_modified_at:
         arr.join('-')
          // 'a-b-c' 를 반환
       ```
+
+      - split : 문자열을 기준에 따라 배열화
+      ```javascript
+        const str = 'The red'
+        str.split(' ')
+        // ['The', 'red'] 를 반환
+        str.split('')
+         // ['T', 'h', 'e', ' ', 'r', 'e', 'd'] 반환
+         // 띄어쓰기도 요소로 반환함 주의
+      ```
   
 
   [참고자료- slice, splice 차이](https://im-developer.tistory.com/103)
