@@ -28,7 +28,8 @@ last_modified_at:
     var Data = 'A';
     export default Data;    
     ```
-2. 가져오기 : import 변수명 from 경로
+2. 가져오기 : import {변수명} from 경로
+   - export default로 내보낸 경우 {} 생략가능
    
     ```javascript
     var Data = 'A';
@@ -38,8 +39,17 @@ last_modified_at:
 여러 개를 내보내는 경우 
 - 내보내기 export {변수1, 변수2}
 - 가져오기 import {변수1, 변수2} from 경로
+- 어려 개의 변수를 내보낼 때는 그냥 자료형이 아닌 변수명이 반드시 있어야 함
 
+### **3. Component 제작**
+1. function 컴포넌트명() {}
+2. return (<div></div>)
+3. 필요한 곳에 <컴포넌트명 />
 
+### **3. props 전송법**
+1. <자식컴포넌트 보낼이름={전송할state} />
+2. function 자식컴포넌트(props){}
+3. props.보낼이름
 
 
 ```javascript
