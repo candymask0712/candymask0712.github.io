@@ -156,7 +156,142 @@ last_modified_at:
   // detail/:id1/:id2
   ```
 
-5. useEffect의 사용
+### **5. styled-components**
+1. styled-components 
+- class 선언 없이 컴포넌트에 CSS를 직접 장착
+- CSS in JS라고도 부름
+- 장점 : className 작명 필요x, css요소 간 간섭 없음
+- 단점 : 엘리먼트마다 컴포넌트로 변환 필요
+  1. 기본셋팅
+    - yarn add styled-componenets 로 설치
+    - import styled form 'styled-components' 로 가져옴
+  2. 사용법
+    - 상단 위치에 선언하기(백틱 사용)
+    ```javascript
+    let 박스 = styled.div`
+        padding: 20px;
+      `;
+      //'박스'라는 이름의 <div>태그를 생성
+      // padding은 20px로 설정
+    ```
+    - 원하는 위치에 컴포넌트 사용
+    ```javascript
+      return (
+      <div>
+        <div className="container">
+          <박스>예시</박스>
+        <div>
+    ```
+  3. 활용
+    - 특성 하나만 바꿔 재활용 (템플릿리터럴 활용)
+    ```javascript
+      let 제목 = styled.h4`
+        color: ${props => props.색상};
+      `;
+    ```
+    - 원하는 컴포넌트에서 props 보내주기
+      ```javascript
+          return (
+            <div>
+                <박스>
+                  <제목 색상="blue">Detail</제목>
+                  <제목 색상="red">Detail</제목>
+                </박스>
+            <div>
+        ```
+
+  
+    - import styled form 'styled-components' 로 가져옴  
+
+### **6. SASS**
+  - CSS를 프로그래밍 언어처럼 다룰 수 있는 대체문법
+  - 브라우저가 읽을 수 있게 CSS로 컴파일 필요
+  
+  1. 준비과정
+    - 컴파일을 위한 node-sass 설치 
+      ```javascript
+      yarn add node-sass
+      ```
+    - sass 파일 생성 후 import
+      ```javascript
+      import './Detail.scss';
+      ```
+  2. 활용
+    - 색상 등 반복변수는 저장해 활용
+      ```scss
+        $변수명 : 변수에 넣을 값
+        $maincolor : #ff0000;
+
+        .red {color: $maincolor}
+      ```
+
+    - @import를 이용한 파일경로 설정
+      ```scss
+        @import './_reset.scss';
+        // reset 등 자주 사용표현들 저장해 사용
+        // 이런파일은 _를 앞에 표시
+      ```
+
+    - nesting 문법
+      : 셀렉터 해석이 쉽고  
+        관련 된 class 끼리 관리 쉬움
+      ```scss
+      // 일반 css 선택자
+      div.container h4 {
+          color : blue;
+        }
+      div.container p {
+        color : green;
+      }
+      ```
+      ```scss
+      // nesting 문법 적용 시
+      div.container {
+        h4 {
+          color : blue;
+        }
+        p {
+          color : green;
+        }
+      }
+      ```
+    - @extend 문법
+      : 반복되는 특성 손쉽게 관리
+      ```scss
+      .my-alert {
+        background : #eeeeee;
+        padding : 15px;
+        border-radius : 5px;
+        max-width : 500px;
+        width : 100%;
+        margin : auto;
+      }
+      .my-alert2 {
+        @extend .my-alert;
+        background : yellow;
+      }
+      // my-alert의 속성이 그대로 전달
+      ```
+    - @mixin 문법
+      : 함수 형태로 반복되는 특성 손쉽게 관리
+      ```scss
+      @mixin 함수() {
+        background : #eeeeee;
+        padding : 15px;
+        border-radius : 5px;
+        max-width : 500px;
+        width : 100%;
+        margin : auto;
+      }
+      .my-alert {
+        @include 함수()
+      }
+      // 함수의 특성이 my alert로 그대로 전달
+      ```
+
+[참고자료 - SASS문법(extends & mixin)](http://megaton111.cafe24.com/2017/01/13/sass-%EB%AC%B8%EB%B2%95-%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0import-%EC%83%81%EC%86%8Dextend-%EB%AF%B9%EC%8A%A4%EC%9D%B8mixin/)
+### **7. useEffect의 활용**
+1. useEffect의 사용
   - 컴포넌트가 mount/update 시 특정 코드 실행  
   - setTimeout과 함께 사용 시 다양하게 활용 가능  
     ex) 특정 페이지 방문 후 n초 내에 사라지는 알람 등  
