@@ -296,9 +296,58 @@ last_modified_at:
   - setTimeout과 함께 사용 시 다양하게 활용 가능  
     ex) 특정 페이지 방문 후 n초 내에 사라지는 알람 등  
     ```javascript
-      setTimeout(()=>{실행할코드},시간(ms단위))
+      useEffect(()=>{
+        let timer = setTimeout( () =>{
+          setShowDetailPage(!showDetailPage);
+        },2000)
+      },[])
+      // [] 자리가 빈칸이면 컴포넌트 load, update 시 실행
+      // [] 안에 state 넣으면 해당 state 변경시에만 실행
+      // [] 자리에 []만 있으면 컴포넌트 load 시에만 실행
     ```
 
+2. setTimeout 해제
+  - 타이머 별도 해제 안할 시 버그 발생 가능성
+  - 예를 들어 정해진 시간 전 사용자가 페이지 이탈 등 
+     ```javascript
+      useEffect(()=>{
+        let 타이머 = setTimeout(()=>{ alert변경(false) }, 2000);
+
+        return ()=>{ clearTimeout(타이머) }
+      }, []);
+      // useEffect 내에 return + 함수 추가 시 컴포넌트 사라질때 특정코드 실행
+      // cleerTimeout 을 추가하여 코드 꼬임 방지 
+
+    ```
+### **8. AJAX 적용**
+  - 새로고침 없이 서버요청이 가능한 JS코드
+  - AJAX 적용 방법
+    a. jQuery Ajax 사용
+    b. axios 설치 후 사용
+    c. JS 최신문법 fetch() 사용
+1. 
+  - 
+     ```javascript
+      },[])
+      // [] 자리가 빈칸이면 컴포넌트 load, update 시 실행
+      // [] 안에 state 넣으면 해당 state 변경시에만 실행
+      // [] 자리에 []만 있으면 컴포넌트 load 시에만 실행
+    ```
+
+2. setTimeout 해제
+  - 타이머 별도 해제 안할 시 버그 발생 가능성
+  - 예를 들어 정해진 시간 전 사용자가 페이지 이탈 등 
+     ```javascript
+      useEffect(()=>{
+        let 타이머 = setTimeout(()=>{ alert변경(false) }, 2000);
+
+        return ()=>{ clearTimeout(타이머) }
+      }, []);
+      // useEffect 내에 return + 함수 추가 시 컴포넌트 사라질때 특정코드 실행
+      // cleerTimeout 을 추가하여 코드 꼬임 방지 
+
+    ```
+ 
 
 ```javascript
 ```
