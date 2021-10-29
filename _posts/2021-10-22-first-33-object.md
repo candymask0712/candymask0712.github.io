@@ -63,27 +63,18 @@ obj[name] // 만약 name이 동적변수인 경우
    age in obj // false
    ```
 
-```javascript
-```
-`<code>` 코드강조
+- 단, `key in~` 방식은 프로토타입 체인으로 생성한 프로파티도 체크하여 T/F 반환  
+- `객체명.hasOwnProperty('key값')` 사용으로 커버가능
+- 객체가 키를 직접속성으로 포함하는지 여부 반환
+   ```javascript
+   const obj = {
+	   a:'1'
+      }
+      Object.prototype.b= undefined
 
-[링크명](링크주소)    
-![대체텍스트](이미지주소)
+      console.log( obj.hasOwnProperty('a') ) // true
+      console.log( obj.hasOwnProperty('b') ) // false
+   ```
 
-*** 
-수평선
+[참고자료 - key in과 hasOwnProperty의 차이](https://velog.io/@minong/Javascript-%EA%B0%9D%EC%B2%B4%EC%97%90-%ED%95%B4%EB%8B%B9-key%EA%B0%92%EC%9D%B4-%EC%A1%B4%EC%9E%AC%ED%95%98%EB%8A%94%EC%A7%80-%ED%99%95%EC%9D%B8%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95)
 
->인용
->>인용2
-
-| | |
----|---
-| | |
-| | |
-
-| | |
----|---
-| 
-|
-
-<small></small>

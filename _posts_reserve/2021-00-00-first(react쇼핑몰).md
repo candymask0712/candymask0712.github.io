@@ -15,7 +15,7 @@ last_modified_at:
 ### **1.**
 1. 프로젝트 설명
    npx create-react-app 폴더명
-   yarn create-react-app 폴더명 (더 빠름)
+   yarn create react-app 폴더명 (더 빠름)
 
 ### **2. import/export 사용법**
 - 파일 간 변수/데이터 이동 시 사용
