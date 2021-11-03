@@ -21,6 +21,7 @@ last_modified_at:
 - loop 반복 중 대상이 변한다면 for 사용 필요
 
 - forEach 사용 시
+
 ```javascript
 // loop 중간 '-'들이 추가되면서 arr배열의 길이 변동
 // 하지만 forEach는 원 배열 길이만큼만 반복
@@ -46,6 +47,7 @@ console.log(solution('133556779294'))
 ```
 
 - for 사용 시
+  
 ```javascript
 // for 문은 조건식이 거짓일 때 까지 반복문 시행
 // 매 시행마다 조건식을 평가
@@ -68,6 +70,7 @@ console.log(solution('133556779294'))
 - 답을 찾는 즉시 종료 가능한 문제라면 for 사용 필요
 
 - forEach 사용 시
+  
 ```javascript
 // return 사용이 불가해 모든 요소 탐색 필수
 function solution(str) {
@@ -82,6 +85,7 @@ function solution(str) {
 ```
 
 - for 사용 시
+
 ```javascript
 // 답을 찾는 즉시 return으로 탈출 가능
 function solution(str) {
@@ -96,7 +100,9 @@ function solution(str) {
     return false;
 }
 ```
+
 - 모범답안
+  
 ```javascript
 // 답을 찾는 즉시 return으로 탈출 가능
 function ABCheck(str) {
