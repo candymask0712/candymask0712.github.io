@@ -90,7 +90,7 @@ function solution (n) {
 console.log(solution(3))  
 ```
 
-2. 서로 합이 같은 부분집합이 있는지 찾기
+2. 서로 합이 같은 부분집합이 있는지 찾기  
   (단 각 부분집합은 모든 요소를 활용해야함)
 
 ```javascript
@@ -120,4 +120,37 @@ function solution(arr) {
 
 let arr=[1,3,5,6,7,10];
 console.log(solution(arr));
+```
+
+- 종료 방식 별 차이
+```javascript
+(...)
+if(flag) return;
+if(L===n) {
+    if(sum===total/2) {
+        answer="YES"
+        flag=1;
+    }
+}
+
+// 이 방식 사용 시 스택에 남은 함수만 호출
+// 다른 재귀호출은 없이 끝남
+
+(...)
+(...)
+
+if(L===n) {
+    if(sum===total/2) {
+        answer="YES"
+        return
+        
+    }
+}
+
+(...)
+
+
+// 이 방식 사용 시 호출된 함수만 종료되고
+// 스택에 남아 있는 함수들은 종료되지 않고
+// 다시 팝되어 다시 재귀를 호출
 ```
