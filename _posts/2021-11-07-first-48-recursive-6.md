@@ -1,14 +1,13 @@
 ---
-title: "[]  "
-excerpt: "21년 월 일 공부일지"
+title: "[Algorithm] DFS - 탐색"
+excerpt: "21년 11월 05일 공부일지"
 toc: true
 toc_sticky: true
 toc_label: "페이지 컨텐츠 리스트"
 categories:
-  - JS
+  - Algorithm
 tags:
   - Algorithm
-  - React
   - JS
   - TIL
 last_modified_at:

@@ -1,5 +1,5 @@
 ---
-title: "[Algorithm] 이진트리(DFS) - 순열"
+title: "[Algorithm] DFS - 탐색"
 excerpt: "21년 11월 05일 공부일지"
 toc: true
 toc_sticky: true

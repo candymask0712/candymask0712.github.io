@@ -1,5 +1,5 @@
 ---
-title: "[Algorithm] 재귀함수 기초 및 이진트리"
+title: "[Algorithm] 재귀함수 기초 및 이진트리(DFS)"
 excerpt: "21년 11월 02일 공부일지"
 toc: true
 toc_sticky: true
