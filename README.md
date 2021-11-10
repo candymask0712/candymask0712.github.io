@@ -1,3 +1,3 @@
-## 블로그 포스팅과 커스터마이징 하는 공간입니다. 😀💛
+## 프론트엔드 개발 공부 블로그입니다 :)
 
-<https://ansohxxn.github.io>
+https://candymask0712.github.io/
