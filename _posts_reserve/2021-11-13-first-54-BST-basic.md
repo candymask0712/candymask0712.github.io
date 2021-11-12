@@ -1,6 +1,6 @@
 ---
-title: "[]"
-excerpt: "21년 11월 10일 공부일지"
+title: "[Algorithm] BST의 기초와 기본예제"
+excerpt: "21년 11월 12일 공부일지"
 toc: true
 toc_sticky: true
 toc_label: "페이지 컨텐츠 리스트"
