@@ -13,9 +13,9 @@ tags:
 last_modified_at:
 ---
 
-### **1. 프로젝트 시작**
+## **1. 프로젝트 시작**
 
-1. 디렉토리 생성 및 설치
+### 1. 디렉토리 생성 및 설치
 
 - npm init 으로 시작 (server이름만 원하는 이름으로 설정 server.js)
 
@@ -104,6 +104,7 @@ app.use(express.urlencoded({extended: true}))
 
 - name속성으로 input에 이름 쓰기
 ```javascript
+// html 파일
 <div class="form-group">
   <label>오늘의 할일</label>
   <input type="text" class="form-control" name="title">
@@ -113,4 +114,13 @@ app.use(express.urlencoded({extended: true}))
   <input type="text" class="form-control" name="date">
 </div>
 // 사용을 위해 서버파일 최상단에 기재
+```
+
+
+```javascript
+app.post('/add', function(요청, 응답){
+  응답.send('전송완료')
+  console.log(요청.body.title)
+})
+// 요청.body.정한이름 으로 데이터 들어옴
 ```
