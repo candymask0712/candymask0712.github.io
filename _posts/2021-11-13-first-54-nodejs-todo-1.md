@@ -28,7 +28,7 @@ const app = express();
 
 ```
 
-2. 기본 서버요청 구현
+### 2. 기본 서버요청 구현
 
 - listen으로 기본 포트번호 구현
 - get사용하여 페이지별 보여줄 내용 구성
@@ -47,9 +47,9 @@ app.get('/pet', function(요청, 응답){
 // 요청들은 node 파일명.js 로 실행 후 반영 됨
 ```
 
-### **2. 기본 준비**
+## **2. 기본 준비**
 
-1. nodemon으로 서버 재실행 자동화
+### 1. nodemon으로 서버 재실행 자동화
 
 ```bash
 npm install -g nodemon
@@ -62,7 +62,7 @@ nodemon server.js
 
 ```
 
-2. url별 html 파일 연결하기
+### 2. url별 html 파일 연결하기
 
 ```javascript
 app.get('/', function(요청, 응답){
@@ -71,12 +71,12 @@ app.get('/', function(요청, 응답){
 // http://localhost:8080/ 접속 시 index.html 파일 내용이 보임
 ```
 
-3. bootstrap으로 기본 스타일링
+### 3. bootstrap으로 기본 스타일링
 
 - 아래 url에서 Starter template을 html에 복사   
 [bootstrap 홈페이지](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
 
-4. post 요청하기
+### 4. post 요청하기
 
 `app.post('경로',콜백함수)` 형태로 사용
 ```javascript
@@ -90,7 +90,7 @@ app.post('/add', function(요청, 응답){
 })
 // input에 적은 정보는 '요청' 부분에 저장 됨
 ```
-5. body-parser를 이용한 내용 전달                          
+### 5. body-parser를 이용한 내용 전달                          
                                          
 
 $ npm install body-parser 설치
@@ -115,7 +115,6 @@ app.use(express.urlencoded({extended: true}))
 </div>
 // 사용을 위해 서버파일 최상단에 기재
 ```
-
 
 ```javascript
 app.post('/add', function(요청, 응답){
