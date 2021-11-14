@@ -1,7 +1,7 @@
 ---
-title: "자료 구조와 알고리즘 (with C#)"
+title: "HTML"
 layout: archive
-permalink: categories/algorithm-lesson-2
+permalink: /categories/html
 author_profile: true
 sidebar_main: true
 ---
@@ -10,5 +10,5 @@ sidebar_main: true
 
 ***
 
-{% assign posts = site.categories['Algorithm Lesson 2'] %}
+{% assign posts = site.categories['HTML'] %}
 {% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}
