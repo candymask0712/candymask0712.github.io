@@ -53,6 +53,13 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Nodejs lecture 1" %}
+                        <li><a href="/categories/nodejs-lecture-1" class="">Node.js lecture 1(todo)({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
 
         <span class="nav__sub-title">Coding-test</span>
             <ul>
@@ -75,6 +82,13 @@
                 {% for category in site.categories %}
                     {% if category[0] == "OS" %}
                         <li><a href="/categories/os class="">OS({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "OS lecture 1" %}
+                        <li><a href="/categories/oslecture1 class="">OS lecture 1({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -131,6 +145,13 @@
                     {% endif %}
                 {% endfor %}
             </ul> 
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Book" %}
+                        <li><a href="/categories/book" class="">Book({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "etc" %}

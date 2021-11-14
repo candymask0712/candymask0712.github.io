@@ -5,12 +5,9 @@ toc: true
 toc_sticky: true
 toc_label: "페이지 컨텐츠 리스트"
 categories:
-  - JS
-tags:
   - Algorithm
-  - React
-  - JS
-  - TIL
+tags:
+  - JavaScript
 last_modified_at:
 ---
 

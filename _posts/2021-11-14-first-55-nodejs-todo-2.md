@@ -1,15 +1,14 @@
 ---
-title: "[Nodejs] todo 앱 만들기 -2"
-excerpt: "21년 월 일 공부일지"
+title: "[Nodejs lecture 1] todo app 만들기 - 2"
+excerpt: 
 toc: true
 toc_sticky: true
 toc_label: "페이지 컨텐츠 리스트"
 categories:
-  - Nodejs
+  - Nodejs lecture 1
 tags:
   - Nodejs
-  - JS
-  - TIL
+  - JavaScript
 last_modified_at:
 ---
 

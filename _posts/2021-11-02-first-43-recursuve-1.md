@@ -7,9 +7,7 @@ toc_label: "페이지 컨텐츠 리스트"
 categories:
   - Algorithm
 tags:
-  - Algorithm
-  - JS
-  - TIL
+  - JavaScript
 last_modified_at:
 ---
 
@@ -49,7 +47,7 @@ recurFunc(3);
 
 2. 이진트리 순회 기본
 
-![참고영상 - 이진트리의 3가지 순회방법](https://www.youtube.com/watch?v=QN1rZYX6QaA)
+  [참고영상 - 이진트리의 3가지 순회방법](https://www.youtube.com/watch?v=QN1rZYX6QaA)
 
 ```javascript
 // 전위순회 부모 -> 왼쪽 -> 오른쪽

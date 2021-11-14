@@ -5,13 +5,10 @@ toc: true
 toc_sticky: true
 toc_label: "페이지 컨텐츠 리스트"
 categories:
-  - JS
-tags:
   - Algorithm
+tags:
+  - JavaScript
   - Queue
-  - Stack
-  - JS
-  - TIL
 last_modified_at:
 ---
 

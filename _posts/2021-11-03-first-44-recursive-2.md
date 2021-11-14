@@ -7,9 +7,7 @@ toc_label: "페이지 컨텐츠 리스트"
 categories:
   - Algorithm
 tags:
-  - Algorithm
-  - JS
-  - TIL
+  - JavaScript
 last_modified_at:
 ---
 ### **1.재귀함수를 이용한 부분집합 만들기**  

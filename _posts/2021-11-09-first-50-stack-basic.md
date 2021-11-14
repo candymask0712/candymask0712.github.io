@@ -7,10 +7,8 @@ toc_label: "페이지 컨텐츠 리스트"
 categories:
   - Algorithm
 tags:
-  - Algorithm
   - stack
-  - JS
-  - TIL
+  - JavaScript
 last_modified_at:
 ---
 

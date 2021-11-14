@@ -7,9 +7,7 @@ toc_label: "페이지 컨텐츠 리스트"
 categories:
   - Algorithm
 tags:
-  - Algorithm
-  - JS
-  - TIL
+  - JavaScript
 last_modified_at:
 ---
 
@@ -20,7 +18,7 @@ last_modified_at:
 - 조건에 따라 문자열에 '-'를 삽입하는 문제
 - loop 반복 중 대상이 변한다면 for 사용 필요
 
-- forEach 사용 시
+- forEach 사용 예시
 
 ```javascript
 // loop 중간 '-'들이 추가되면서 arr배열의 길이 변동
@@ -67,6 +65,7 @@ console.log(solution('133556779294'))
 ```
 
 ### **2. return 등 loop 중단 시의 차이점**
+
 - 답을 찾는 즉시 종료 가능한 문제라면 for 사용 필요
 
 - forEach 사용 시
