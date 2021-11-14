@@ -5,9 +5,8 @@ toc: true
 toc_sticky: true
 toc_label: "페이지 컨텐츠 리스트"
 categories:
-  - TIL
+  - Linux
 tags:
-  - TIL
   - CLI
 last_modified_at:
 ---
@@ -17,8 +16,6 @@ last_modified_at:
 - CLI(Command Line Interface)는 터미널을 통해 컴퓨터를 조작
 - GUI를 위한 I/O소스를 부착하기 어려운 서버환경에 필수적
 - CLI의 명령줄 대기모드인 prompt에 입력하여 사용
-
-`<code>`
 
 ### **2. 기본명령어**
 

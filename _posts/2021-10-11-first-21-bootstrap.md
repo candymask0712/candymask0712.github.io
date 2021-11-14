@@ -1,18 +1,16 @@
 ---
-title: "[TIL] Bootstrap 사용법"
-excerpt: "21년 10월 11일 공부일지"
+title: "[React] Bootstrap 사용법"
+excerpt: 
 toc: true
 toc_sticky: true
 toc_label: "페이지 컨텐츠 리스트"
 categories:
-  - TIL
-  - JavaScript
+  - React
 tags:
   - Bootstrap
-  -
+  - JavaScript
 last_modified_at:
 ---
-
 
 ### **Bootstrap 시작**
 

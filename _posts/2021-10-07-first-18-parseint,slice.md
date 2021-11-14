@@ -1,15 +1,14 @@
 ---
-title: "[TIL]숫자, 문자열 다루기"
-excerpt: "21년 10월 7일 공부일지"
+title: "[JavaScript] 숫자, 문자열 다루기"
+excerpt: 
 toc: true
 toc_sticky: true
 toc_label: "페이지 컨텐츠 리스트"
 categories:
-  - TIL
   - JavaScript
 tags:
-  - let
-  - if
+  - slice
+  - parseInt
   - type
 last_modified_at:
 ---
@@ -47,7 +46,7 @@ Math.floor("12  34  56"); // NaN
 parseInt("12  34  56"); // 12
 ```
 
-### 2. ** slice의 인수 생략 시 출력**
+### 2. **slice의 인수 생략 시 출력**
 
 slice() 메소드는 원본 배열은 수정되지 않는다.
 

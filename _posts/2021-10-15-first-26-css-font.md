@@ -1,13 +1,13 @@
 ---
-title: "[TIL] CSS 기초 (글꼴)"
-excerpt: "21년 10월 15일 공부일지"
+title: "[CSS] CSS 기초 - 글꼴"
+excerpt: 
 toc: true
 toc_sticky: true
 toc_label: "페이지 컨텐츠 리스트"
 categories:
   - CSS
 tags:
-  - CSS
+  - font
 last_modified_at:
 ---
 
@@ -16,10 +16,12 @@ last_modified_at:
 1. font-family - 글꼴
    : 사용자 시스템의 지정 글꼴이 없을 것 대비 여러 개 지정 (fallback)
 `font-family:<글꼴 이름> | [<글꼴이름2>,<글꼴이름3>]`
+
 ```javascript
 body{font-family :"맑은 고딕", 돋움, 굴림}
 // 두 단어 이상으로 된 글꼴은 ""로 묶어 표시
 ```
+
 2. font-size - 글자크기  
 `font-size:<절대 크기>|<상대크기>|<크기>|<백분율>`  
 a. 키워드 이용  (small, medium, large 등)  

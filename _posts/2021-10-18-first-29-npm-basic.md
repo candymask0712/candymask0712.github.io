@@ -1,15 +1,14 @@
 ---
-title: "[TIL] Node.js 기초(패키지와 런타임)"
-excerpt: "21년 10월 18일 공부일지 (소제목)"
+title: "[Node.js] Node.js 기초 - 패키지 개념과 npm"
+excerpt: 
 toc: true
 toc_sticky: true
 toc_label: "페이지 컨텐츠 리스트"
 categories:
-  - TIL
   - Nodejs
 tags:
-  - TIL
-  - Nodejs
+  - nvm
+  - npm
 last_modified_at:
 ---
 

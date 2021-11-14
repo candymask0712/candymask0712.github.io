@@ -1,15 +1,14 @@
 ---
-title: "[JS] 스코프와 클로저"
-excerpt: "21년 10월 24일 공부일지" 
+title: "[javaScript] 스코프와 클로저"
+excerpt:
 toc: true
 toc_sticky: true
 toc_label: "페이지 컨텐츠 리스트"
 categories:
-  - javascript
+  - JavaScript
 tags:
   - closure
   - scope
-  - til
 last_modified_at:
 ---
 

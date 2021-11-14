@@ -1,17 +1,15 @@
 ---
-title: "[Git] git의 기본 사용법 1 - 버전관리  "
-excerpt: "21년 10월 23일 공부일지"
+title: "[Git] Git의 기본 사용법 1 - 버전관리  "
+excerpt: 
 toc: true
 toc_sticky: true
 toc_label: "페이지 컨텐츠 리스트"
 categories:
-  - git
+  - Git
 tags:
-  - git
-  - til
+  - version
 last_modified_at:
 ---
-
 ### **1. Git이란**
 - 소스코드 기록을 관리/추적하는 버전 관리 시스템
 - 크게 버전 관리/백업/협업 용도로 사용

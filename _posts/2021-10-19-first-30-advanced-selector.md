@@ -1,26 +1,24 @@
 ---
-title: "[CSS] CSS 고급 선택자"
-excerpt: "21년 10월 19일 공부일지"
+title: "[CSS] CSS - 고급 선택자"
+excerpt: 
 toc: true
 toc_sticky: true
 toc_label: "페이지 컨텐츠 리스트"
 categories:
   - CSS
 tags:
-  - TIL
-  - CSS
+  - selector
 last_modified_at:
 ---
 
-
 ### **1. 고급 선택자**
+
 - 기본 선택자로 스타일 적용 어려운 요소를 선택
 
 ### **2. 하위/자식 선택자**
 
 - 둘 이상이 선택자를 연결해서 스타일이 적용될 부분 지정
-- 조합선택자 또는 콤비네이션 선택자라고도 부름    
-
+- 조합선택자 또는 콤비네이션 선택자라고도 부름  
 
 - 하위 요소 : 특정 요소 기준 그 안에 포함 된 요소
 - 자식 요소 : 현재 요소 기준 바로 한 단계 아래 요소
@@ -32,6 +30,7 @@ last_modified_at:
 
 1. 하위(자손) 선택자 (descendant selector)  
    : 부모요소에 포함 된 하위 요소에 적용
+
     ```css
     section p {.....}
     /* 상위요소 section 에 포함 된 모든 p요소 선택 */
@@ -39,6 +38,7 @@ last_modified_at:
 
 2. 자식 선택자 (child selector)  
    : `>` 기호를 이용 자식 요소에만 적용
+
     ```css
     section > p {.....}
     /* 상위요소 section 에 포함 된 자식요소 p 선택 */
@@ -46,6 +46,7 @@ last_modified_at:
 
 3. 인접 형제 선택자(adjacent selector)
    : `+` 기호를 이용 첫 번째 동생요소에만 적용
+
     ```css
     h1 + p {.....}
     /* h1의 형제인 p요소 중 첫번째 요소에만 적용 */
@@ -53,6 +54,7 @@ last_modified_at:
 
 4. 형제 선택자(sibling selector)
    : `~` 기호를 이용 모든 형제요소에 적용
+
     ```css
     h1 ~ p {.....}
     /* h1의 형제인 p요소 중 동생 요소에만 적용 */
@@ -63,27 +65,32 @@ last_modified_at:
 - 태그 안에서 사용하는 속성 값에 따라 요소를 선택  
 
 1. [속성] 선택자
+
     ```css
     a [href] {.....}
     /* a 요소 중 href 속성이 있는 요소에 적용*/
     ```
 
 2. [속성=속성값] 선택자
+
     ```css
     a [target = _blank] {.....}
     /* a 요소 중 target 속성 값이 'blank' 인 요소에 적용*/
     ```
+
 ### **3. 다중 선택자**
 
 - 여러 요소를 동시에 선택
 
 1. OR 선택자
+
     ```css
     .classA, .classB {.....}
     /*나열한 특성을 가진 모든 요소에 적용*/
     ```
 
 2. AND 선택자
+
     ```css
     .classA.classB {.....}
     /*나열한 특성을 동시에 만족하는 요소에만 적용*/
@@ -94,47 +101,56 @@ last_modified_at:
 ### **4. 가상 클래스와 가상 요소**
 
 1. 가상 클래스 : 사용자의 동작에 따라 스타일을 변경
+
     ```css
     .navi a:hover {...}
     /* navi 요소에 마우스 포인트 올렸을 때 적용 */
     ```
+
 - 주로 사용하는 가상 클래스 선택자는 아래 순서로 정의
   ①:link - ②:visited - ③:hover - ④:active
 
-2. 요소 상태 클래스 : 요소의 상태에 따라 스타일 변경
+1. 요소 상태 클래스 : 요소의 상태에 따라 스타일 변경
   
     ```css
     .navi input:checked {...}
     /* input 요소에 checked 속성이 추가 되었을 때 적용 */
     ```
+
     ```css
     .navi input:not([type=radio]) {...}
     /* input 요소 중 type이 radio가 아닌 요소에 적용 */
     /* 여러 요소를 선택해야 할 시 효율적 */
     ```
 
-3. 구조 가상 클래스 : 웹 문서의 구조를 기준으로 특정 위치 요소의 스타일 변경
+2. 구조 가상 클래스 : 웹 문서의 구조를 기준으로 특정 위치 요소의 스타일 변경
     - first, last는 요소가 한 개라도 있으면 선택
     - nth는 정확히 해당요소 없으면 선택 안함
+  
     ```css
     .contents :nth-child(3) {...}
     /* contents 세 번째 자식 요소에 적용*/
     /* 괄호 안 index는 1부터 시작*/
     ```
+
     ```css
     div:last-child {...}
     /*모든 div 요소 중 마지막 div 요소 선택*/
     ```
+
     ```css
     div :last-child {...}
     /*div 자식 요소 중 마지막 자식 요소를 선택/
     ```
+
 참고자료  
 [:first-child, :first-of-type 차이 :: 마이구미](https://mygumi.tistory.com/342#:~:text=%3Afirst%2Dchild%20%3D%3E%20%ED%98%95%EC%A0%9C,%EC%9D%98%20%EC%9A%94%EC%86%8C%EB%9D%BC%EA%B3%A0%20%EB%B3%B4%EB%A9%B4%20%EB%90%9C%EB%8B%A4.)
 
 1. 가상 요소 : 문서 안 특정 부분에 스타일 적용을 위해 가상으로 요소를 만들어 추가
+
 - 화면에 보이는 부분을 꾸밀 때 불필요한 태그 절약
 - 가상요소 이름 앞에 콜론 2개(`::`)를 붙여서 표시
+  
     ```css
     li.new::after {
       content: "NEW!!";

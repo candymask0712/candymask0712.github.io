@@ -1,14 +1,13 @@
 ---
-title: "[JS] 객체의 이해 및 메서드"
-excerpt: "21년 10월 22일 공부일지 "
+title: "[JavaScript] 객체의 이해 및 메서드"
+excerpt: 
 toc: true
 toc_sticky: true
 toc_label: "페이지 컨텐츠 리스트"
 categories:
-  - JS
+  - JavaScript
 tags:
-  - JS
-  - TIL
+  - Object
 last_modified_at:
 ---
 

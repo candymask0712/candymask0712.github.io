@@ -1,20 +1,23 @@
 ---
-title: "[강연] 2년차 프론트엔드 개발자의 생각들(우테코 X 원티드)"
-excerpt: "21년 10월 26일 공부일지"
+title: "[Lecture] 2년차 프론트엔드 개발자의 생각들 (우테코 X 원티드 3)"
+excerpt: 
 toc: true
 toc_sticky: true
 toc_label: "페이지 컨텐츠 리스트"
 categories:
-  - CSS
+  - Lecture
 tags:
-  - CSS
+  - front-end
+  - junior
+  - toss
+  - wanted
 last_modified_at:
 ---
 ### **1. 연사 및 주제**
  - 연사 : 양성민 (현 토스페이먼츠 프론트개발자)
  - 주제 : 2년차 프론트엔드 개발자의 생각들
 
-![온라인강연 이미지](./images/../../_posts/images/2021-10-16-image.png)
+![강연사진](https://github.com/candymask0712/candymask0712.github.io/blob/master/_posts/images/2021-10-16-image.png?raw=true)
 
 ### **2. 주요 내용 정리**    
 
@@ -31,7 +34,7 @@ last_modified_at:
   : react를 총괄하는 Dan Abramov조차도 모든 것을 아는 것이 아니며 힘겨워 할때가 있다          
   다른 사람들을 과대평가하지 말고 자신의 길을 걷자
 
-![임포스터신드롬](./images/../../_posts/images/2021-10-16-image2.png)
+![강연사진](https://github.com/candymask0712/candymask0712.github.io/blob/master/_posts/images/2021-10-16-image2.png?raw=true)
 [글 링크](https://overreacted.io/ko/things-i-dont-know-as-of-2018/)
 
 **- 면접관으로 들어가봐서야 알게된 내용**

@@ -41,6 +41,13 @@
         <span class="nav__sub-title">Back-end</span>
             <ul>
                 {% for category in site.categories %}
+                    {% if category[0] == "Linux" %}
+                        <li><a href="/categories/linux" class="">Linux({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
                     {% if category[0] == "Nodejs" %}
                         <li><a href="/categories/nodejs" class="">Node.js({{category[1].size}})</a></li>
                     {% endif %}
@@ -105,7 +112,7 @@
         <span class="nav__sub-title">ETC</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "lecture" %}
+                    {% if category[0] == "Lecture" %}
                         <li><a href="/categories/lecture" class="">lecture({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
@@ -114,6 +121,13 @@
                 {% for category in site.categories %}
                     {% if category[0] == "VS code" %}
                         <li><a href="/categories/vscode" class="">VScode({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul> 
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Git" %}
+                        <li><a href="/categories/git" class="">Git({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul> 

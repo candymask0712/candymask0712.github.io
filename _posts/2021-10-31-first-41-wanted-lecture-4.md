@@ -1,13 +1,16 @@
 ---
-title: "[강연] 우테코 X 원티드 프론트엔드 강연 4"
-excerpt: "하루빨리 SI/SM을 벗어나야 하는 이유"
+title: "[Lecture] 하루빨리 SI/SM을 벗어나야 하는 이유 (우테코 X 원티드 4)"
+excerpt: ""
 toc: true
 toc_sticky: true
 toc_label: "페이지 컨텐츠 리스트"
 categories:
-  - CSS
+  - Lecture
 tags:
-  - CSS
+  - front-end
+  - junior
+  - coupang
+  - wanted
 last_modified_at:
 ---
 ### **1. 연사 및 주제**

@@ -1,18 +1,16 @@
 ---
-title: "[TIL]반복문"
-excerpt: "21년 10월 8일 공부일지"
+title: "[JavaScript] for, while loop의 이해"
+excerpt: 
 toc: true
 toc_sticky: true
 toc_label: "페이지 컨텐츠 리스트"
 categories:
-  - TIL
   - JavaScript
 tags:
-  - for
-  - while
+  - for loop
+  - while loop
 last_modified_at:
 ---
-
 ### 1. **for 반복문에서 조건설정을 효율적으로 하자**
 
 for 반복문 작성 시 조건 부분을 기계적으로 작성하는 경우가 있다  

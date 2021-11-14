@@ -1,15 +1,13 @@
 ---
-title: "[JS] 고차함수의 이해  "
-excerpt: "21년 10월 29일 공부일지"
+title: "[JavaScript] 일급 객체와 주요 고차함수 "
+excerpt: 
 toc: true
 toc_sticky: true
 toc_label: "페이지 컨텐츠 리스트"
 categories:
-  - JS
+  - JavaScript
 tags:
   - higher order function
-  - JS
-  - TIL
 last_modified_at:
 ---
 
@@ -27,26 +25,28 @@ last_modified_at:
     -> 이 경우 고차함수는 함수를 인자로 받는 함수로 한정하기도 함
 
 1. 다른 함수를 인자로 받는 경우
-```javascript
-function double(num) {
-  return num * 2;
-}
 
-function doubleNum(func, num) {
-  return func(num);
-}
+  ```javascript
+  function double(num) {
+    return num * 2;
+  }
 
-/*
- * 함수 doubleNum은 다른 함수를 인자로 받는 고차 함수입니다.
- * 함수 doubleNum의 첫 번째 인자 func에 함수가 들어올 경우
- * 함수 func는 함수 doubleNum의 콜백 함수입니다.
- * 아래와 같은 경우, 함수 double은 함수 doubleNum의 콜백 함수입니다.
- */
-let output = doubleNum(double, 4);
-console.log(output); // -> 8
-```
+  function doubleNum(func, num) {
+    return func(num);
+  }
 
-2. 함수를 리턴하는 경우
+
+   // 함수 doubleNum은 다른 함수를 인자로 받는 고차 함수입니다.
+   // 함수 doubleNum의 첫 번째 인자 func에 함수가 들어올 경우
+   // 함수 func는 함수 doubleNum의 콜백 함수입니다.
+   // 아래와 같은 경우, 함수 double은 함수 doubleNum의 콜백 함수입니다
+
+  let output = doubleNum(double, 4);
+  console.log(output); // -> 8
+  ```
+
+1. 함수를 리턴하는 경우
+
 ```javascript
 function adder(added) {
   return function (num) {
@@ -71,7 +71,8 @@ output = add3(2);
 console.log(output); // -> 5
 ```
 
-3. 함수를 인자로 받고, 함수를 리턴하는 경우
+1. 함수를 인자로 받고, 함수를 리턴하는 경우
+
 ```javascript
 function double(num) {
   return num * 2;
@@ -84,11 +85,9 @@ function doubleAdder(added, func) {
   };
 }
 
-/*
- * 함수 doubleAdder는 고차 함수입니다.
- * 함수 doubleAdder의 인자 func는 함수 doubleAdder의 콜백 함수입니다.
- * 함수 double은 함수 doubleAdder의 콜백으로 전달되었습니다.
- */
+// 함수 doubleAdder는 고차 함수입니다.
+// 함수 doubleAdder의 인자 func는 함수 doubleAdder의 콜백 함수입니다.
+// 함수 double은 함수 doubleAdder의 콜백으로 전달되었습니다.
 
 // doubleAdder(5, double)는 함수이므로 함수 호출 기호 '()'를 사용할 수 있습니다.
 doubleAdder(5, double)(3); // -> 13
@@ -110,6 +109,7 @@ addTwice3(2); // --> 8
 
 1. sort
     - 배열의 요소를 변경
+
     ```javascript
     배열.sort();
     // 원본배열을 정렬 (오름차순- 유니코드 기준)
@@ -119,18 +119,25 @@ addTwice3(2); // --> 8
     // 유니코드는 문자열 기준임 따라서
     // 숫자정렬 시 비교함수를 인자로 전달해야 함
     ```
-2. forEach 
+
+2. forEach
+ 
 3. filter
+
     ```javascript
     배열.filter((요소, 인덱스, 배열) => { return 요소 });
     // 콜백함수의 반환값이 true인 요소로만 이루어진 새 배열 반환
     ```
+
 4. map
+
     ```javascript
     배열.map((요소, 인덱스, 배열) => { return 요소 });
         // 콜백함수의 반환값으로 이루어진 새 배열을 반환
     ```
+
 5. reduce
+
     ```javascript
     배열.reduce((누적값, 현잿값, 인덱스, 요소) => { return 결과 }, 초깃값);
     // 콜백함수의 반환값으로 이루어진 새 배열을 반환
@@ -140,3 +147,4 @@ addTwice3(2); // --> 8
       // 조건1의 경우 return에 누적값만 있어 변화 없음
       else if(조건 2) return 누적값 + 현재값
       }, 초깃값);
+    ```

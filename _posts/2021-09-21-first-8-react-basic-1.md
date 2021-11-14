@@ -1,17 +1,31 @@
 ---
-title: "[React] React 기초 개념 정리-2 "
-excerpt: "JSX의 기본문법"
+title: "[React] React 기초 - 1 (React의 장단점과 JSX문법)"
+excerpt: "React 기초"
 toc: true
 toc_sticky: true
 toc_label: "페이지 컨텐츠 리스트"
 categories:
   - React
 tags:
-  - React
-  - JS
+  - JavaScript
   - JSX
 last_modified_at:
 ---
+
+## React란
+
+프론트앤드 개발을 위한 JS 오픈소스 라이브러리
+
+### React의 장점
+
+1. 선언형(Declarative) : JSX를 이용해 한 파일에 명시적으로 작성
+2. 컴포넌트 기반(Component-Based) : 독립적/재사용 가능 -> 기능 자체에 집중한 개발 가능
+3. 범용성(Learn Once, Write Anywhre) : JS 프로젝트에 유연하게 사용 가능
+
+## JSX란
+
+JS의 확장문법, Babel을 통해 JS로 컴파일 후 화면에 렌더링
+
 
 ## JSX의 기본문법
 

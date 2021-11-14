@@ -1,12 +1,11 @@
 ---
-title: "[TIL] 기본 CRUD구현 (state, props)"
-excerpt: "21년 10월 10일 공부일지"
+title: "[React] 기본 CRUD구현 (state, props)"
+excerpt: 
 toc: true
 toc_sticky: true
 toc_label: "페이지 컨텐츠 리스트"
 categories:
-  - TIL
-  - JavaScript
+  - React
 tags:
   - state
   - props
