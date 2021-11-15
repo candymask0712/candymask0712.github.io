@@ -81,14 +81,14 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "OS" %}
-                        <li><a href="/categories/os class="">OS({{category[1].size}})</a></li>
+                        <li><a href="/categories/os" class="">OS({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "OS lecture 1" %}
-                        <li><a href="/categories/oslecture1 class="">OS lecture 1({{category[1].size}})</a></li>
+                        <li><a href="/categories/os-lecture-1" class="">OS lecture 1({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>

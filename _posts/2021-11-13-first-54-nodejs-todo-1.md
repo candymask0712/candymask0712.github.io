@@ -1,6 +1,6 @@
 ---
-title: "[Nodejs lecture 1] todo app 만들기 - 1"
-excerpt: 
+title: "[Nodejs lecture 1] todo app 만들기 - 1 (시작 및 기본요청)"
+excerpt:
 toc: true
 toc_sticky: true
 toc_label: "페이지 컨텐츠 리스트"
@@ -21,10 +21,9 @@ last_modified_at:
 - server.js 파일 생성(최상위 디렉토리)
 
 ```javascript
-const express = require('express');
+const express = require("express");
 const app = express();
 // 서버를 만들기 위한 기본문법
-
 ```
 
 ### 2. 기본 서버요청 구현
@@ -64,44 +63,46 @@ nodemon server.js
 ### 2. url별 html 파일 연결하기
 
 ```javascript
-app.get('/', function(요청, 응답){
-  응답.sendFile(__dirname + '/index.html')
-})
+app.get("/", function (요청, 응답) {
+  응답.sendFile(__dirname + "/index.html");
+});
 // http://localhost:8080/ 접속 시 index.html 파일 내용이 보임
 ```
 
 ### 3. bootstrap으로 기본 스타일링
 
-- 아래 url에서 Starter template을 html에 복사   
-[bootstrap 홈페이지](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
+- 아래 url에서 Starter template을 html에 복사  
+  [bootstrap 홈페이지](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
 
 ### 4. post 요청하기
 
 `app.post('경로',콜백함수)` 형태로 사용
+
 ```javascript
-<form method="POST" class="form-inline my-2 my-lg-0" />
+<form method="POST" class="form-inline my-2 my-lg-0" />;
 // 액션일어나기 원하는 태그에 method와 class 꼭 지정해주기
 // /add 경로로 post를 요청하게 됨
 
 // ser
-app.post('/add', function(요청, 응답){
-  응답.send('전송완료')
-})
+app.post("/add", function (요청, 응답) {
+  응답.send("전송완료");
+});
 // input에 적은 정보는 '요청' 부분에 저장 됨
 ```
-### 5. body-parser를 이용한 내용 전달                          
-                                         
+
+### 5. body-parser를 이용한 내용 전달
 
 $ npm install body-parser 설치
 
 ```javascript
-const bodyParser = require('body-parser');
-app.use(express.urlencoded({extended: true})) 
+const bodyParser = require("body-parser");
+app.use(express.urlencoded({ extended: true }));
 
 // 사용을 위해 서버파일 최상단에 기재
 ```
 
 - name속성으로 input에 이름 쓰기
+
 ```javascript
 // html 파일
 <div class="form-group">
@@ -116,9 +117,9 @@ app.use(express.urlencoded({extended: true}))
 ```
 
 ```javascript
-app.post('/add', function(요청, 응답){
-  응답.send('전송완료')
-  console.log(요청.body.title)
-})
+app.post("/add", function (요청, 응답) {
+  응답.send("전송완료");
+  console.log(요청.body.title);
+});
 // 요청.body.정한이름 으로 데이터 들어옴
 ```

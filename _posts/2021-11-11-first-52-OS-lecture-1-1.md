@@ -5,7 +5,7 @@ toc: true
 toc_sticky: true
 toc_label: "페이지 컨텐츠 리스트"
 categories:
-  - OS
+  - OS lecture 1
 tags:
   - shell
   - system call
@@ -28,6 +28,8 @@ last_modified_at:
 
 ### **2. 커널 모드(kernel mode)**
 
+![OS 내부의 권한계층](https://github.com/candymask0712/candymask0712.github.io/blob/master/_posts/images/2021-11-15-image.png?raw=true)
+
 - CPU의 권한모드 (CPU Protection Ring)
 
   - 사용자 모드 : 응용프로그램이 사용
@@ -38,4 +40,4 @@ last_modified_at:
   - 커널모드에서만 가능한 기능 -> 커널모드 실행 시 반드시 시스템콜 거쳐야 함
   - **OS기능 쓰는 API호출 시 커널모드로 변경 -> OS 내부에서 실행 후 응용프로그램으로 돌아감**
 
-[참고자료 - 컴퓨터 공학 전공 필수 강의(현재는 수강불가)]
+[참고자료 - 컴퓨터 공학 전공 필수 강의 (패스트캠퍼스 - 현재는 수강불가)]
