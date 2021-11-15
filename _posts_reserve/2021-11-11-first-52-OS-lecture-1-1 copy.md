@@ -1,5 +1,5 @@
 ---
-title: "[OS lecture 1] 운영체제 구조 - 커널모드 & 시스템 콜 "
+title: "[OS lecture 1] 운영체제 구조 - 2 - 프로세스 스케쥴링"
 excerpt:
 toc: true
 toc_sticky: true
@@ -7,8 +7,9 @@ toc_label: "페이지 컨텐츠 리스트"
 categories:
   - OS lecture 1
 tags:
-  - shell
-  - system call
+  - batch processing
+  - time sharing system
+  - multi tasking
 last_modified_at:
 ---
 

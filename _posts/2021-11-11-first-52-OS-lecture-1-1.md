@@ -1,5 +1,5 @@
 ---
-title: "[OS lecture 1] 운영체제 구조 - 커널모드 & 시스템 콜 "
+title: "[OS lecture 1] 운영체제 구조 - 1 - 커널모드 & 시스템 콜 "
 excerpt:
 toc: true
 toc_sticky: true
