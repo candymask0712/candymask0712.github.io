@@ -123,3 +123,5 @@ app.post("/add", function (요청, 응답) {
 });
 // 요청.body.정한이름 으로 데이터 들어옴
 ```
+
+[참고자료 - codingapple Nodejs 강의](https://codingapple.com/course/node-express-mongodb-server/)

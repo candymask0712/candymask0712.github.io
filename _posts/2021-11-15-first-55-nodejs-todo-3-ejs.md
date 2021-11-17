@@ -34,20 +34,23 @@ last_modified_at:
 
 ### 2. EJS 사용
 
-- `%`기호를 이용해 데이터 삽입
-
-  ```javascript
-  // server.js
-  app.set("view engine", "ejs");
-  ```
-
-- ```javascript
-  // server.js
-  app.set("view engine", "ejs");
-  ```
-
 - 기존 html 파일의 확장자를 .ejs로 변경
 
   - .ejs 확장자는 html 기능 쓰면서도 서버데이터 삽입 가능
 
 - .ejs 파일은 반드시 views 폴더를 생성해서 그 안에 삽입
+
+- `%`기호를 이용해 데이터 삽입
+  `<%= 서버에서 보낸 데이터의 변수명 %>`
+
+  ```html
+  // list.ejs
+  <h2><%= user.name %></h2>
+  ```
+
+- 서버파일 상단에 ejs 사용을 위한 코드 작성
+
+  ```javascript
+  // server.js
+  app.set("view engine", "ejs");
+  ```
