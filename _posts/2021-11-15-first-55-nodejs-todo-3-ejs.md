@@ -54,3 +54,5 @@ last_modified_at:
   // server.js
   app.set("view engine", "ejs");
   ```
+
+[참고자료 - codingapple Nodejs 강의](https://codingapple.com/course/node-express-mongodb-server/)

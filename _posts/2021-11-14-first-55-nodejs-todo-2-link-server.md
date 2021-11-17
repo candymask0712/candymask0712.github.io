@@ -11,10 +11,7 @@ tags:
   - JavaScript
 last_modified_at:
 ---
-
-## **1. MongoDB 연결 및 기본사용**
-
-### 1. 디렉토리 생성 및 설치
+### **1. 디렉토리 생성 및 설치**
 
 - MongoDB 사이트 접속하여 기본 설정
   https://www.mongodb.com/
@@ -40,7 +37,7 @@ last_modified_at:
   // 몽고디비의 실제 사용 방법
   ```
 
-### 2. database에 자료 저장하기
+### **2. database에 자료 저장하기**
 
 - MongoDB 사이트 collection 메뉴에서 기본설정
 - database는 폴더, collection은 파일과 비슷한 역할
@@ -64,3 +61,5 @@ last_modified_at:
     }
   );
   ```
+
+[참고자료 - codingapple Nodejs 강의](https://codingapple.com/course/node-express-mongodb-server/)

@@ -75,7 +75,7 @@ printAll();
 // than을 사용하여 순차적 실행되어 가독성 좋음
 ```
 
--
+- 여러 함수를 병렬적으로 실행하는 예시
 
 ```javascript
 function getUp() {
@@ -180,4 +180,5 @@ const result = async () => {
   const four = await goToBed();
   console.log(four);
 };
+// 굳이 코드를 이어서 쓰지 않아도 순차처리 가능
 ```
