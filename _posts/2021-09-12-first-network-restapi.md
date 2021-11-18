@@ -1,13 +1,12 @@
 ---
-title: "[Nodejs] REST API란"
-excerpt: 
+title: "[Network] REST API란"
+excerpt:
 toc: true
 toc_sticky: true
 toc_label: "페이지 컨텐츠 리스트"
 categories:
-  - Nodejs
+  - Network
 tags:
-  - Nodejs
   - REST API
   - JavaScript
 last_modified_at:
@@ -27,7 +26,7 @@ last_modified_at:
 
 ## **3. REST의 원칙 6가지**
 
-- 위 쪽에 있는 1 ~ 3번이 특히 중요한 원칙  
+- 위 쪽에 있는 1 ~ 3번이 특히 중요한 원칙
 
 ### **1. Uniform Interface**
 
