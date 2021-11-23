@@ -16,8 +16,8 @@ last_modified_at:
 
 - 멀티 프로그래밍 : CPU 활용도를 극대화하는 스케쥴링
 - runnung state : 현재 CPU에서 실행 상태
-- ready state : 
-- block state : 
+- ready state : 현재 CPU에서 실행 가능 상태
+- block state : 특정 이벤트 발생 대기 상태
 
 
 
