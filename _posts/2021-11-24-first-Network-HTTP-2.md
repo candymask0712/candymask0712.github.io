@@ -1,5 +1,5 @@
 ---
-title: "[Network] HTTP/네트워크 기초 - 2 (브라우저의 작동원리)"
+title: "[Network] HTTP/네트워크 기초 - 2 (브라우저 작동원리 - 상)"
 excerpt:
 toc: true
 toc_sticky: true
