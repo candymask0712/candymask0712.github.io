@@ -54,8 +54,9 @@ https://urclass.codestates.com/8b42cac5-a994-411f-bcb8-73c41c582ef0?playlist=549
 ### **3. CORS**
 
 - Cross-Origin Resource Sharing의 약자
-- 처음 전송되는 리소스의 도메인과 다른 도메인으로부터 리소스가 요청 될 경우 발생
+- 처음 전송되는 리소스의 도메인과 다른 도메인으로부터 리소스가 요청 될 경우 발생(AJAX 요청일 때만)
 - SOP, Same Origin Policy에 의해 기본적으로는 막혀 있음
+- 프로토콜 - 호스트(도메인) - 포트번호가 모두 같아야 같은 Origin임
 - CORS가 허용 될 경우 보안에 위협이 될 수 있어서 유의해야 함
 - simple requset(조건 충족 시) 외에는 preflight 요청을 먼저보내 안전여부 확인
 
