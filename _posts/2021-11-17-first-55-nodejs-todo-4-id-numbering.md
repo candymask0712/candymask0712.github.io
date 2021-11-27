@@ -29,8 +29,8 @@ name : "게시물 갯수" }
 - sever파일에서 해당 collection 연동
 
 ```javascript
-  db.collection('counter').findOne({name : "게시물 갯수"})
-  // counter collection에서 "name"이라는 프로퍼티 하나만 찾기
+db.collection("counter").findOne({ name: "게시물 갯수" });
+// counter collection에서 "name"이라는 프로퍼티 하나만 찾기
 ```
 
 - 게시글 업로드마다 id이 값이 1씩 더해지도록 연동
@@ -42,7 +42,7 @@ db.collection('counter').updateOne({수정할데이터},{수정할 값},function
 // 총 세 개의 인자를 넣을 수 있고 마지막 콜백 함수는 옵션
 
 db.collection('counter').updateOne({name:'게시물 갯수'},{ $inc : {totalPost:1}},function(에러, 결과){
-  
+
 })
 // 수정할 값에 operator 이용하여 값 변경
 // 문법에 따라 값은 다시 중괄호로 감싸야 함
@@ -53,7 +53,5 @@ db.collection('counter').updateOne({name:'게시물 갯수'},{ $inc : {totalPost
 // $min (기존 값보다 적을 때만 변경)
 // $rename (key 값 이름 변경)
 ```
-
-
 
 [참고자료 - codingapple Nodejs 강의](https://codingapple.com/course/node-express-mongodb-server/)
