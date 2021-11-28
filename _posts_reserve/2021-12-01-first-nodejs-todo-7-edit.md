@@ -23,55 +23,56 @@ last_modified_at:
     - 여기에 edit을 위한 요청부분과 id부분 추가
 
     ```JavaScript
-    // edit.ejs
-    <div class="container mt-3">
-      <form action="/edit?_method=PUT" method="POST">
-
-        <div class="form-group">
-          <label>id</label>
-          <input type="number" class="form-control" name="id" value="<%= data._id %>" style="display: none;">
+    <form action="/edit?_method=PUT" method="POST">
+    // HTML에서는 get, post 요청만 가능
+    // 그 외 요청을 위해서 method-override 사용
+    <div class="form-group">
+      <label>id</label>
+      <input type="number" class="form-control" name="id" value="<%= data._id %>" style="display: none;">
+    // edit 시 글을 특정하기 위해 id 값 추가(보이지 않게 처리)
+    </div>
     ```
 
-### 2. list 페이지에서 상세페이지 이동 기능 만들기
+### 2. method-override 설치 및 사용
+
+    - `npm install method-override` 명령어 이용 설치
 
     ```JavaScript
-    // list.ejs
-    <h4 class="ml-2 my-3">서버에서 가져온 할 일 리스트</h4>
-    <ul class="list-group">
-      <% for(let i = 0; i < posts.length; i++ ){ %>
-      <a href="http://localhost:8080/detail/<%= posts[i]._id %>">
-        <li class="list-group-item">
-          <p>글번호 : <%= posts[i]._id %></p>
-          <h4>할 일 제목 : <%= posts[i].제목 %></h4>
-          <p>할 일 마감날짜 : <%= posts[i].날짜 %></p>
-          <button class="delete" data-id="<%= posts[i]._id %>">샥제</button>
-        </li>
-      </a>
-      <% } %>
-    </ul>
+    // server.ejs
+    const methodOverride = require('method-override')
+    app.use(methodOverride('_method'))
+    // 서버 파일 상단에 미들웨어 사용 명시
     ```
 
-### 3. detail페이지 이동시 서버에서 보내 줄 데이터 처리
+### 3. edit 처리를 위한 서버쪽 코드 작성 
 
     ```JavaScript
     // server.js
-    app.get('/detail/:id', function(요청, 응답){
-      // /뒤에 ':'을 입력하면 /뒤에 아무 내용이나 입력해도 이동하라는 명령
-      // ':' 뒤에 붙은 id는 원하는 대로 작명 가능
+    app.get('/edit/:id', function(요청, 응답){
+     // edit 뒤에 어떤 문자가 오더라도 edit.ejs를 렌더링해 보여줌
       요청.params.id = Number(요청.params.id)
-      // 몽고디비에 있는 id와 요청의 id의 타입이 다름
-      // 항상 타입처리에 대해 신경써야함
-      // vs code에서 보내는 값에 커서를 올리면 대략적으로 확인 가능
+      // 요청은 url에서 파라미터의 형태로 들어옴
+      // 파라미터로 들어온 id값을 숫자로 변환
+      // 인자 전달 시에는 항상 타입체크 중요
         db.collection('post').findOne({_id: 요청.params.id}, function(에러, 결과){
-          if(에러){
-            응답.render('detail.ejs', {에러: 에러})
-          console.log(결과)
-          } else {
-            응답.render('detail.ejs', { data : 결과 })
-          }
+        // post 콜렉션에서 id가 요청.params.id과 일치하는 데이터 찾기
+            응답.render('edit.ejs', { data : 결과 })
+            // DB에 요청한 값은 결과라는 이름으로 들어옴
+            // 찾은 데이터를 객체에 담아 data라는 이름으로 전달
         })
-        // 요청이 들어오면 {}안에있는 데이터를 보내고 ejs파일을 렌더링
     });
+
+    app.put('/edit', function(요청, 응답){
+      let num = Number(요청.body.id)
+      db.collection('post').updateOne({_id: num}, { $set : {제목 : 요청.body.title, 날짜 : 요청.body.date}}, 
+      // post 컬렉션에서 수정된 제목과 날짜로 값을 바꿈
+      function(에러, 결과){
+        db.collection('post').findOne({_id: num}, function(에러, 결과){
+          응답.redirect('/list')
+          // 수정을 한 뒤 빈 페이지 대신 list로 연결
+        })
+      });
+    })
     ```
 
 [참고자료 - codingapple Nodejs 강의](https://codingapple.com/course/node-express-mongodb-server/)
