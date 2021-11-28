@@ -1,5 +1,5 @@
 ---
-title: "[Nodejs lecture 1] todo app 만들기 - 6 (상세 페이지 제작)"
+title: "[Nodejs lecture 1] todo app 만들기 - 7 (글 수정 기능 추가)"
 excerpt:
 toc: true
 toc_sticky: true
@@ -12,20 +12,24 @@ tags:
 last_modified_at:
 ---
 
-## **1. 상세페이지 만들기**
+## **글 수정 기능 추가하기**
 
-    - 상세페이지에 해당하는 별도의 ejs파일을 만듬
-    - detail 페이지로 접속 시 해당되는 데이터에 접속
+    - 수정에 해당하는 ejs 파일 만듬
+    - /:id 방식으로 글 번호에 해당하는 페이지로 이동 시킴
 
-### 1. 상세페이지용 ejs 파일 만들기
+### 1. 수정 기능 용 ejs 파일 만들기
+
+    - 제목 및 날짜 수정을 위해 기존 write와 유사하게 작성
+    - 여기에 edit을 위한 요청부분과 id부분 추가
 
     ```JavaScript
-    // detail.ejs
-    <h4>상세페이지</h4>
+    // edit.ejs
+    <div class="container mt-3">
+      <form action="/edit?_method=PUT" method="POST">
 
-    <h4>제목 : <%= data.날짜 %></h4>
-    <h4>내용 : <%= data.제목 %></h4>
-    // server 에서 { data : 결과 } 형태로 전달한 내용을 표시
+        <div class="form-group">
+          <label>id</label>
+          <input type="number" class="form-control" name="id" value="<%= data._id %>" style="display: none;">
     ```
 
 ### 2. list 페이지에서 상세페이지 이동 기능 만들기
