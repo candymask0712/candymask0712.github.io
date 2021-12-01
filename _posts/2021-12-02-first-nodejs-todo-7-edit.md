@@ -44,7 +44,7 @@ last_modified_at:
     // 서버 파일 상단에 미들웨어 사용 명시
     ```
 
-### 3. edit 처리를 위한 서버쪽 코드 작성 
+### 3. edit 처리를 위한 서버쪽 코드 작성
 
     ```JavaScript
     // server.js
@@ -64,7 +64,7 @@ last_modified_at:
 
     app.put('/edit', function(요청, 응답){
       let num = Number(요청.body.id)
-      db.collection('post').updateOne({_id: num}, { $set : {제목 : 요청.body.title, 날짜 : 요청.body.date}}, 
+      db.collection('post').updateOne({_id: num}, { $set : {제목 : 요청.body.title, 날짜 : 요청.body.date}},
       // post 컬렉션에서 수정된 제목과 날짜로 값을 바꿈
       function(에러, 결과){
         db.collection('post').findOne({_id: num}, function(에러, 결과){
