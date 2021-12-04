@@ -32,6 +32,13 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
+                    {% if category[0] == "TypeScript" %}
+                        <li><a href="/categories/typescript" class="">JavaScript({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
                     {% if category[0] == "React" %}
                         <li><a href="/categories/react" class="">React({{category[1].size}})</a></li>
                     {% endif %}
