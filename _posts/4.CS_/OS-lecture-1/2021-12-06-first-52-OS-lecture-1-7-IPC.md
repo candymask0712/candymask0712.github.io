@@ -7,6 +7,7 @@ toc_label: "페이지 컨텐츠 리스트"
 categories:
   - OS lecture 1
 tags:
+  - IPC
   - process
   - scheduling
 last_modified_at:
