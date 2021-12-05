@@ -125,3 +125,5 @@ last_modified_at:
      }
    }
    ```
+
+[참고자료 - codingapple TS 강의](https://codingapple.com/course/typescript-crash-course/)

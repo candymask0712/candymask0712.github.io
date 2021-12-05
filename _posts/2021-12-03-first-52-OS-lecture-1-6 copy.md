@@ -1,0 +1,43 @@
+---
+title: "[OS lecture 1] 운영체제 구조 - 6 - 컨텍스트 스위칭"
+excerpt:
+toc: true
+toc_sticky: true
+toc_label: "페이지 컨텐츠 리스트"
+categories:
+  - OS lecture 1
+tags:
+  - process
+  - scheduling
+last_modified_at:
+---
+
+### **1. 프로세스 구조**
+
+- 프로세스는 아래와 같이 구성 됨
+
+      - text(CODE) : 컴파일 된 코드
+      - DATA : 변수/초기화 된 데이터 (BSS/DATA)
+      - stack : 임시데이터 (함수 호출, 로컬변수 등)
+      - heap : 코드에서 동적으로 만들어지는 데이터
+
+- DATA는 BSS(초기화 X 전역변수) / DATA(초기값 O 전역변수)
+- 리턴 주소(코드 종료 후 실행 주소) 덮어쓰기로 해커들 공격에 활용
+
+### **2. PCB**
+
+- Process Control(Context) Block : 프로세스 실행중 상태 캡처&구조화해서 저장
+- Process ID / Resister (PC,SP) / Scheduling Info / Memory Info
+- SP(스택 포인터) : 스택 최상단의 주소를 저장
+- PC(프로그램 카운터) : 다음의 실행할 명령어의 위치 기록
+
+[스택과 프로그램 카운터의 명확한 차이점이 궁금합니다.](https://okky.kr/article/622475)
+[PEDIAA - SP,PC의 차이](https://pediaa.com/what-is-the-difference-between-stack-pointer-and-program-counter/)
+
+### **3. 컨텍스트 스위칭**
+
+- CPU에 실행할 프로세스를 교체하는 기술 1. 실행 중지할 프로세스 정보 PCB에 저장 2. 다음 실행할 프로세스의 PCB정보를 CPU의 레지스터에 넣고 실행
+
+- 굉장히 짧은 ms 단위로 진행되어 마치 동시에 처리되는 듯한 느낌
+
+[참고자료 - 컴퓨터 공학 전공 필수 강의 (패스트캠퍼스 - 현재는 수강불가)]
