@@ -14,15 +14,22 @@ tags:
 last_modified_at:
 ---
 
-### **1. 소제목**
+### **1. 배열**
 
-1. slice
+- slice
 
-   ```javascript
-    let A = arr.slice(st, end); // st 이상 end '미만'으로 잘라냄
-    let B = arr.slice(st, end); // 원배열 수정 X (할당 필요)
-    let C = arr.slice(1); // 0번째 요소 제외 마지막 요소까지 잘라냄
-   ```
+  ```javascript
+  let A = arr.slice(st, end); // st 이상 end '미만'으로 잘라냄
+  let B = arr.slice(st, end); // 원배열 수정 X (할당 필요)
+  let C = arr.slice(1); // 0번째 요소 제외 마지막 요소까지 잘라냄
+  ```
+
+- Array
+
+  ```javascript
+  let A = Array(n).fill(x); // x로 n만큼 채워진 행렬
+  console.log(Array(3).fill(0)); // [0,0,0]
+  ```
 
 ### **2. 소제목**
 

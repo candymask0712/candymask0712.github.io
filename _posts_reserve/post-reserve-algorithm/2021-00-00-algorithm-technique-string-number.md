@@ -14,7 +14,7 @@ tags:
 last_modified_at:
 ---
 
-### **1. 소제목**
+### **1. 글자**
 
 1. repeat
 
@@ -22,17 +22,20 @@ last_modified_at:
    let A = "수박".repeat(3); // "수박수박수박"
    ```
 
-### **2. 소제목**
+2. toLowerCase() / toUpperCase()
 
-1. 객체
+   ```javascript
+   let str = "abCD";
+   str.toLowerCase(); // 'abcd'
+   str.toUpperCase(); // 'ABCD'
+   ```
 
-[빈 객체 확인 시 컨스트럭터 확인이 필요한 이유](https://velog.io/@soyi47/Javascript-%EB%B9%88-%EA%B0%9D%EC%B2%B4-%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0)
-[빈객체 확인법](https://hianna.tistory.com/462)
+### **2. 숫자**
 
 - 내용
 
 ```javascript
-
+const A = Math.floor(n / 2); // 내림 : n=5 이면 A=2
 ```
 
 - 내용
