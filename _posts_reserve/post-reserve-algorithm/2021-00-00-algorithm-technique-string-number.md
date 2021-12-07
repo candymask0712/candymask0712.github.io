@@ -24,11 +24,15 @@ last_modified_at:
 
 2. toLowerCase() / toUpperCase()
 
-   ```javascript
-   let str = "abCD";
-   str.toLowerCase(); // 'abcd'
-   str.toUpperCase(); // 'ABCD'
-   ```
+- "문자열".toLowerCase() 처럼 괄호안이 아닌 앞에 붙음
+- 메서드 명이 스네이크 케이스로 중간에 대문자 포함
+- 마지막에 괄호도 주의
+
+  ```javascript
+  let str = "abCD";
+  str.toLowerCase(); // 'abcd'
+  str.toUpperCase(); // 'ABCD'
+  ```
 
 ### **2. 숫자**
 
