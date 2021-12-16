@@ -1,11 +1,11 @@
 ---
-title: "[OS lecture 1] 운영체제 구조 -  - "
+title: "[Computer Architecture] 컴퓨터 구조 - 1 - "
 excerpt:
 toc: true
 toc_sticky: true
 toc_label: "페이지 컨텐츠 리스트"
 categories:
-  - OS lecture 1
+  - Computer Architecture
 tags:
   - process
   - scheduling
