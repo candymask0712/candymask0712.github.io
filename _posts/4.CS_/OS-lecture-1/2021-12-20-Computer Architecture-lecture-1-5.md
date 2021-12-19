@@ -1,5 +1,5 @@
 ---
-title: "[Computer Architecture] 컴퓨터 구조 - 4 - 데이터의 종류"
+title: "[Computer Architecture] 컴퓨터 구조 - 5 - 논리회로와 데이터 표현"
 excerpt:
 toc: true
 toc_sticky: true
@@ -7,7 +7,7 @@ toc_label: "페이지 컨텐츠 리스트"
 categories:
   - Computer Architecture
 tags:
-  - data
+  - logical gate
 last_modified_at:
 ---
 

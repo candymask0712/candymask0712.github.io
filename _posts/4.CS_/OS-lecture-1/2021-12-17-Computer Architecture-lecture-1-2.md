@@ -7,8 +7,7 @@ toc_label: "페이지 컨텐츠 리스트"
 categories:
   - Computer Architecture
 tags:
-  - process
-  - scheduling
+  - CPU
 last_modified_at:
 ---
 
@@ -47,5 +46,9 @@ last_modified_at:
    1. 부팅시 CPU는 ROM에 있는 프로그램 실행
    2. CPU는 메모리로부터 실행할 명령어와 데이터를 가져와 처리
    3. RAM는 보조기억장치에 저장(save)하고, 보조기억장치는 RAM에 적재(load)함
+
+4. 입/출력장치(input/Output device)
+
+    - I/O기기라고 부르며 키보드, 마우스, 스캐너 등 다양한 장치들
 
 [참고자료 - 컴퓨터 공학 전공 필수 강의 (패스트캠퍼스 - 현재는 수강불가)]

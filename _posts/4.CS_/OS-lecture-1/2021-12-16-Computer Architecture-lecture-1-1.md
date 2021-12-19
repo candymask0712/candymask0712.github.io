@@ -7,8 +7,6 @@ toc_label: "페이지 컨텐츠 리스트"
 categories:
   - Computer Architecture
 tags:
-  - process
-  - scheduling
 last_modified_at:
 ---
 

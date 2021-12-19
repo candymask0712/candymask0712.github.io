@@ -1,5 +1,5 @@
 ---
-title: "[Computer Architecture] 컴퓨터 구조 - 4 - 데이터의 종류"
+title: "[Computer Architecture] 컴퓨터 구조 - 7 - 조합/기억 논리회로"
 excerpt:
 toc: true
 toc_sticky: true
