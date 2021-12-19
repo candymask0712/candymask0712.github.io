@@ -1,5 +1,5 @@
 ---
-title: "[Computer Architecture] 컴퓨터 구조 - 2 - "
+title: "[Computer Architecture] 컴퓨터 구조 - 4 - "
 excerpt:
 toc: true
 toc_sticky: true
