@@ -66,12 +66,30 @@ last_modified_at:
 
 ### 4. 모범 답안 및 해설
 
-- 1
+- 배열 전환 없이 문자열을 순회하며 짧은 코드로 풀이
+- 대/소문자에 따라 코드 변환이 달라지는 부분을 삼항연산자로 간결하게 표현
 
   ```javascript
+  function caesar(s, n) {
+    // ! 별로 배열 전환 없이 바로 문자열로 진행
+    var result = "";
 
+    for (var i = 0; i < s.length; i++) {
+      if (s[i] == " ") result += " ";
+      // ! 수식 안에 삼항연산자를 적용하여 깔끔하게 풀이 구성
+      else
+        result += String.fromCharCode(
+          s.charCodeAt(i) > 90
+            ? // ! 대문자/소문자에 따라 97또는 65를 빼고 26으로 나눈 나머지를 구하는 부분이 직관적
+              ((s.charCodeAt(i) + n - 97) % 26) + 97
+            : ((s.charCodeAt(i) + n - 65) % 26) + 65
+        );
+    }
+
+    return result;
+  }
   ```
 
 ### 5. 깨달은 점
 
-- 1
+- 너무 구현 위주의 접근보다는 나올 수 있는 기본 케이스를 체계적으로 분석해 접근하자
