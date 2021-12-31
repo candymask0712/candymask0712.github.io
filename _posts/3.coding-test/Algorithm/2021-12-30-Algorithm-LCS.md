@@ -27,32 +27,32 @@ last_modified_at:
 
 ### 3. 문제 상황
 
-- 문제를
+- 문제를 정확히 이해하지 못해 풀이 실패
 
 ### 4. 모범 답안 및 해설
 
-- ```javascript
-  const LCS = function (str1, str2) {
-    const M = str1.length;
-    const N = str2.length;
-    const table = [];
+```javascript
+const LCS = function (str1, str2) {
+  const M = str1.length;
+  const N = str2.length;
+  const table = [];
 
-    for (let i = 0; i < M + 1; i++) table.push(Array(N + 1).fill(-1));
+  for (let i = 0; i < M + 1; i++) table.push(Array(N + 1).fill(-1));
 
-    for (let i = 0; i <= M; i++) {
-      for (let j = 0; j <= N; j++) {
-        // ! 한 쪽 문자 길이 0 => 만들 수 있는 LCS 없음
-        if (i === 0 || j === 0) table[i][j] = 0;
-        // ! 두 문자 같음 => 이전 인덱스에서 만들 수 있던 LCS길이 보다 1 증가
-        else if (str1[i - 1] === str2[j - 1])
-          table[i][j] = 1 + table[i - 1][j - 1];
-        // ! 두 문자 다름 => 한 쪽을 포기하여 만들 수 있는 LCS의 최대 길이 따름
-        else table[i][j] = Math.max(table[i - 1][j], table[i][j - 1]);
-      }
+  for (let i = 0; i <= M; i++) {
+    for (let j = 0; j <= N; j++) {
+      // ! 한 쪽 문자 길이 0 => 만들 수 있는 LCS 없음
+      if (i === 0 || j === 0) table[i][j] = 0;
+      // ! 두 문자 같음 => 이전 인덱스에서 만들 수 있던 LCS길이 보다 1 증가
+      else if (str1[i - 1] === str2[j - 1])
+        table[i][j] = 1 + table[i - 1][j - 1];
+      // ! 두 문자 다름 => 한 쪽을 포기하여 만들 수 있는 LCS의 최대 길이 따름
+      else table[i][j] = Math.max(table[i - 1][j], table[i][j - 1]);
     }
-    return table[M][N];
-  };
-  ```
+  }
+  return table[M][N];
+};
+```
 
 ### 5. 깨달은 점
 
