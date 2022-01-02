@@ -1,11 +1,11 @@
 ---
-title: "[DB] SQL의 기본문법 - 1 - SELECT "
+title: "[DB] SQL의 기본문법 - 1 - SELECT"
 excerpt:
 toc: true
 toc_sticky: true
 toc_label: "페이지 컨텐츠 리스트"
 categories:
-  - DB
+  - MySQL
 tags:
   - SELECT
   - MySQL
@@ -13,8 +13,6 @@ last_modified_at:
 ---
 
 ### **1. SELECT**
-
--
 
 - 정렬하기
 
@@ -42,14 +40,3 @@ SELECT name FROM animal_ins ORDER BY datetime LIMIT 1
 -- limit 2,6처럼 표현하면 상위 2위~ 6위까지
 
 ```
-
-### **1. SUM/MAX/MIN**
-
-- 중복제거
-
-```sql
-SELECT COUNT(DISTINCT NAME) FROM ANIMAL_INS WHERE NAME IS NOT NULL
--- 중복제거를 위해 DISTINCT를 붙임
-```
-
-[참고자료-곰가드의 라이브러]
