@@ -15,14 +15,14 @@ last_modified_at:
 
 - 디지털 정보의 단위
 
-      - 1 nibble = 4 bit / 1 byte = 8bit / 1 byte = 영문자 1개
-      - 1 워드 : 특정 CPU에서 사용하는 명령어나 데이터의 길이 (8의 배수)
+  - 1 nibble = 4 bit / 1 byte = 8bit / 1 byte = 영문자 1개
+  - 1 워드 : 특정 CPU에서 사용하는 명령어나 데이터의 길이 (8의 배수)
 
 - 진법과 진법변환
 
-      - 2진법 : 0과1 두 가지 기호로 표현하는 수의 체계
-      - 10진법 : 0~9 열 가지 기호로 표현하는 수의 체계
-      - BCD code (Binary Coded Decimal Code) : 2진화 10진 코드
+  - 2진법 : 0과1 두 가지 기호로 표현하는 수의 체계
+  - 10진법 : 0~9 열 가지 기호로 표현하는 수의 체계
+  - BCD code (Binary Coded Decimal Code) : 2진화 10진 코드
 
 ### **2. 보수**
 
