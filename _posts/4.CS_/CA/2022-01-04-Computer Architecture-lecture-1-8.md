@@ -18,7 +18,7 @@ last_modified_at:
   - 컴퓨터에서 데이터 처리동작을 수행하는 부분
   - 레지스터세트(register set) : 명령어를 실행에 필요한 데이터 보관
   - 산술논리장치(ALU, Arithmetic Logic Unit) : 명령어 실행위한 마이크로 연산 수행
-  - 제어장치(Control Unit) : RS 간 정보저농 감시, ALU에게 수행할 동작 지시
+  - 제어장치(Control Unit) : RS 간 정보저농 감시, ALU에게 수행할 동작을 지시
 
 ### **2. 각 레지스터의 명칭/기능**
 
