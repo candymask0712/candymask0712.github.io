@@ -45,7 +45,7 @@ sdfasdfasdfasdfasdfa
 
 ### 2. 로그인페이지 제작 및 & 라우팅
 
-    - `npm install method-override` 명령어 이용 설치
+    - `npm install method-override` 명령어로 설치
 
     ```JavaScript
     // server.ejs
