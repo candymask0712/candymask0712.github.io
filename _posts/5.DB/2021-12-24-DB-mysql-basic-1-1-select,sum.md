@@ -35,8 +35,8 @@ SELECT ANIMAL_ID, NAME FROM ANIMAL_INS WHERE INTAKE_CONDITION="Sick" ORDER BY AN
 - 상위 n개 추출하기
 
 ```sql
-SELECT name FROM animal_ins ORDER BY datetime LIMIT 1
--- limit를 사용하면 상위 n개 추출가능
+SELECT name FROM animal_ins ORDER BY datetime LIMIT 1  
+-- limit를 사용하면 상위 n개 추출
 -- limit 2,6처럼 표현하면 상위 2위~ 6위까지
 
 ```
