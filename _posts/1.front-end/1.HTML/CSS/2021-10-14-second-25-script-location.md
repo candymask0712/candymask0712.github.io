@@ -5,11 +5,12 @@ toc: true
 toc_sticky: true
 toc_label: "페이지 컨텐츠 리스트"
 categories:
-  - HTML
+  - HTML/CSS
 tags:
   - JavaScript
 last_modified_at:
 ---
+
 ### **1. 객체 값으로 null이 들어가는 경우 방지**
 
 script태그 에서 dom조작이 있을 경우 가장 하단에 위치해야 존재하지 않는 dom에 접근하는 상황을 막을 수 있다
