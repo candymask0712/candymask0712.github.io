@@ -47,7 +47,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "JS Deep Dive" %}
-                        <li><a href="/categories/js-deep-dive" class="">React({{category[1].size}})</a></li>
+                        <li><a href="/categories/js-deep-dive" class="">JS Deep Dive({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>   
