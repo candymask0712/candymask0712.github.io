@@ -41,3 +41,5 @@ last_modified_at:
 
 - 변수 선언 시 기본적으로 const 사용하고, let은 재할당 필요한 경우만 사용
 - 재할당 여부가 불분명할 시 일단 const를 사용하는 것을 권장
+
+[참고자료 - 모던 자바스크립트 Deep Dive](http://www.yes24.com/Product/Goods/92742567)
