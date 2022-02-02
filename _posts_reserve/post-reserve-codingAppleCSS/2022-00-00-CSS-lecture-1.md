@@ -1,5 +1,5 @@
 ---
-title: "[CSS] HTML/CSS 강의 - 1 - 웹페이지 레이아웃 만들기 "
+title: "[CSS] HTML/CSS - 1 - 웹페이지 레이아웃 만들기 "
 excerpt:
 toc: true
 toc_sticky: true
@@ -147,7 +147,67 @@ margin-right : auto;
 - inline-block 내에서 글씨 삽입 시 레이아웃이 깨지는 현상 발생(사진)
 - 글자로 인해 baseline이 존재하면 inline-block 요소들이 baseline의 위로 오려고 함
 
-### **5. div와 유사한 태그들**
+### **5. 레이아웃 만들기 3 : 편리한 Flexbox**
+
+- 부모 요소에 display:flex 속성을 주면 하위요소들이 가로로 정렬
+
+  ```CSS
+    display:flex; /* 하위 요소들에 flex 레이아웃 적용 */
+    flex-direction: row /* column(기본, 가로 배치), row(세로 배치) */
+    flex-wrap : wrap /* width가 큰 요소를 아래로 보내고 싶을 때 */
+  ```
+
+  - flex box의 세부속성
+
+  ```CSS
+    .flex-container {
+      display : flex;
+      justify-content : center;  /* 좌우정렬 */
+      align-items : center;  /* 상하정렬 */
+      flex-direction : column; /* 세로정렬 */
+      flex-wrap : wrap;  /* 폭이 넘치는 요소 wrap 처리 */
+      }
+    .box {
+      flex-grow : 2;  /* 폭이 상대적으로 몇배인지 결정 */
+    }
+  ```
+
+### **6. flex를 이용해 반응형 웹페이지 만들기**
+
+- PC에서는 4열, 태블릿에서는 2열, 모바일에서는 1열로 노출
+- 기본적인 container에 대한 설정 후 미디어쿼리에 각각 설정
+
+```CSS
+.container {
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.list {
+  width: 25%;
+}
+
+@media screen and (max-width: 1200px) {
+  .list {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .list {
+    width: 100%;
+  }
+}
+
+```
+
+### **7. div와 유사한 태그들**
 
 - 기능은 div와 동일하나 사용처에 따라 의미를 알려주는 태그가 있음
 - 상황에 따라 <nav>, <section>, <footer> 등의 태그 사용 가능
