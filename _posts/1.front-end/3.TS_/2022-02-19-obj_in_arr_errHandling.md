@@ -1,5 +1,5 @@
 ---
-title: "[React] 배열 안에 들어 있는 객체 다루기 (feat. String literal)"
+title: "[TypeScript] 배열 안에 들어 있는 객체 다루기 (feat. String literal)"
 excerpt:
 toc: true
 toc_sticky: true
@@ -18,13 +18,13 @@ last_modified_at:
 
 먼저 Redux Toolkit을 이용해 받아온 데이터를 for...in 문으로 순회하고 출력해보았다
 
-```Typescript
+```javascript
 // cart.tsx
-  let data = cartData.cartSlice.data[0];
-  console.log('data', data);
-  for (let x in data) {
-    console.log('x', x);
-  }
+let data = cartData.cartSlice.data[0];
+console.log("data", data);
+for (let x in data) {
+  console.log("x", x);
+}
 ```
 
 아래와 같이 잘 출력되는 것을 볼 수 있다
@@ -33,14 +33,14 @@ last_modified_at:
 
 그러나 개별 키에 해당하는 값에 접근하려고 하면 문제가 발생한다
 
-```Typescript
+```javascript
 // cart.tsx
 
-  let data = cartData.cartSlice.data[0];
-  console.log('data', data);
-  for (let x in data) {
-    console.log(x, data[x]);
-  }
+let data = cartData.cartSlice.data[0];
+console.log("data", data);
+for (let x in data) {
+  console.log(x, data[x]);
+}
 ```
 
 `'string' 형식의 식을 '{}' 인덱스 형식에 사용할 수 없으므로 요소에 암시적으로 'any' 형식이 있습니다. '{}' 형식에서 'string' 형식의 매개 변수가 포함된 인덱스 시그니처를 찾을 수 없습니다.`
@@ -50,7 +50,7 @@ last_modified_at:
 검색을 통해 index signature와 string literal에 대해 알게 되었다
 아래와 같이 index의 형식을 지정해 주면 에러는 쉽게 해결할 수 있다
 
-```Typescript
+```javascript
 // cartSlice.tsx
 
 export interface Cart {
@@ -68,6 +68,6 @@ string literal은 string보다 더 좁은(narowed) 타입이기 때문에 오타
 
 이번에 프로젝트를 TS로 진행하는 것을 계기로 TS에 대해 더 많은 공부를 해야겠다
 
-### 요약
+### 2.요약
 
 - String타입의 키로 객체에 접근하려면 index signature를 선언해야 한다

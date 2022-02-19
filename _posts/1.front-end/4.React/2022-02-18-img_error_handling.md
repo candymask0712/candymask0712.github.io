@@ -1,5 +1,5 @@
 ---
-title: "[TypeScript] 배포시 아이콘이 로드되지 않는 현상 해결(feat. React의 이미지 경로)"
+title: "[React] 배포시 아이콘이 로드되지 않는 현상 해결(feat. React의 이미지 경로)"
 excerpt:
 toc: true
 toc_sticky: true
