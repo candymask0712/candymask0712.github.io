@@ -12,7 +12,7 @@ tags:
 last_modified_at:
 ---
 
-### **1. 소제목**
+### **1. JavaScript 관련 질문**
 
 1. var, let, const의 차이점과 호이스팅 (Hoisting)에 대해 설명
 
