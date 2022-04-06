@@ -41,4 +41,4 @@ last_modified_at:
 
   - memeber/customer/user 등 유사한 단어 혼용하지 말 것
 
-- 변수명에 타입 넣기 않기 (JS와는 무관)
+- 변수명에 타입 넣기 않기 (JS와는 무관함)
