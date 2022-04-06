@@ -5,7 +5,7 @@
   <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label }}</label>
   <ul class="nav__items" id="category_tag_menu">
       <li>
-            📂 <span style="font-family:'Cafe24Oneprettynight';">전체 글 수</style> <span style="font-family:'Coming Soon';">{{sum}}</style> <span style="font-family:'Cafe24Oneprettynight';">개</style> 
+            📂 <span style="font-family:'Cafe24Oneprettynight';">전체 글 수</style> <span style="font-family:'Coming Soon';">{{sum}}</style> <span style="font-family:'Cafe24Oneprettynight';">개</style>
       </li>
       <li>
         <span class="nav__sub-title">Front-end</span>
@@ -15,7 +15,7 @@
                         <li><a href="/categories/html-css" class="">HTML/CSS({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
-            </ul> 
+            </ul>
             <!-- <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "CSS" %}
@@ -43,14 +43,21 @@
                         <li><a href="/categories/react" class="">React({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
-            </ul>   
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Angular" %}
+                        <li><a href="/categories/angular" class="">Angular({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "JS Deep Dive" %}
                         <li><a href="/categories/js-deep-dive" class="">JS Deep Dive({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
-            </ul>   
+            </ul>
 
         <span class="nav__sub-title">Back-end</span>
             <ul>
@@ -89,7 +96,7 @@
                         <li><a href="/categories/dataStructure" class="">Data Structure({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
-            </ul> 
+            </ul>
 
         <span class="nav__sub-title">CS</span>
             <ul>
@@ -112,14 +119,14 @@
                         <li><a href="/categories/computerarchitecture" class="">computer Architecture({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
-            </ul> 
+            </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Network" %}
                         <li><a href="/categories/network" class="">Network({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
-            </ul> 
+            </ul>
 
         <span class="nav__sub-title">DB</span>
             <ul>
@@ -135,7 +142,7 @@
                         <li><a href="/categories/mysql" class="">MySQL({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
-            </ul> 
+            </ul>
 
         <span class="nav__sub-title">ETC</span>
             <ul>
@@ -144,21 +151,21 @@
                         <li><a href="/categories/lecture" class="">lecture({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
-            </ul> 
+            </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "VS code" %}
                         <li><a href="/categories/vscode" class="">VScode({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
-            </ul> 
+            </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Git" %}
                         <li><a href="/categories/git" class="">Git({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
-            </ul> 
+            </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Book" %}
@@ -170,6 +177,13 @@
                 {% for category in site.categories %}
                     {% if category[0] == "etc" %}
                         <li><a href="/categories/etc" class="">etc({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "CleanCode" %}
+                        <li><a href="/categories/cleancode" class="">CleanCode({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
