@@ -1,5 +1,5 @@
 ---
-title: "[JS] 기술 면접 주요 문제 리스트 - 1 - JavaScript "
+title: "[JS] JavaScript의 주요 특징"
 excerpt:
 toc: true
 toc_sticky: true
@@ -16,12 +16,14 @@ last_modified_at:
 
 1. var, let, const의 차이점과 호이스팅 (Hoisting)에 대해 설명
 
-   - var, let, const은 재선언 및 재할당 여부가 다름  
-     | | 재선언 | 재할당 |
+   - var, let, const은 재선언 및 재할당 여부가 다름
+
+     |       | 재선언 | 재할당 |
      | ----- | ------ | ------ |
-     | var | O | O |
-     | let | X | O |
-     | const | X | X |
+     | var   | O      | O      |
+     | let   | X      | O      |
+     | const | X      | X      |
+
    - 호이스팅 : 코드 실행 전 변수/함수선언이 스코프 최상단으로 끌어올려 진듯한 현상
 
 2. Javascript와 Nodejs의 차이점
