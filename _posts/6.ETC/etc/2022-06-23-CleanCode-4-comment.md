@@ -1,11 +1,12 @@
 ---
-title: "[CleanCode] 클린코드 공부하기 - 3 - 주석"
+title: "[CleanCode] 클린코드 공부하기 - 4 - 주석"
 excerpt:
 toc: true
 toc_sticky: true
 toc_label: "페이지 컨텐츠 리스트"
 categories:
   - CleanCode
+  - comment
 tags:
   - CleanCode
 
