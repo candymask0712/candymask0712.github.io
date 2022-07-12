@@ -14,9 +14,9 @@ last_modified_at:
 
 ### **1. JavaScript 관련 질문**
 
-1. var, let, const의 차이점과 호이스팅 (Hoisting)에 대해 설명
+1. var, let, const의 차이점과 호이스팅 (Hoisting)
 
-   - var, let, const은 재선언 및 재할당 여부가 다름
+   - var, let, const은 재선언 및 재할당 여부 차이
 
      |       | 재선언 | 재할당 |
      | ----- | ------ | ------ |
