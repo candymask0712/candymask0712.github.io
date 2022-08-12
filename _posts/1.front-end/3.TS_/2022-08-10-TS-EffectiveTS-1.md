@@ -13,7 +13,7 @@ last_modified_at:
 
 ### **1. JS는 TS의 부분 집합**
 
-```TypeScript
+```JavaScript
 // 타입이 추가 된 아래 코드는 JS 런타임에서 에러 발생
 function func(x: string) {
   console.log(x)
@@ -24,7 +24,7 @@ function func(x: string) {
 
 - TS는 초기값으로부터 타입을 추론
 
-  ```TypeScript
+  ```JavaScript
   // x의 초기값 'a'에서 string 타입을 추론
   const x = 'a'
 
@@ -37,7 +37,7 @@ function func(x: string) {
 
 - TS는 JS보다 엄격한 문법 체크를 통해 오류를 예방
 
-  ```TypeScript
+  ```JavaScript
   // 아래 코드는 JS에서는 모두 정상 작동
   // TS에서는 각각 '+ 연산자를 적용할 수 없음', '0~1개의 인수가 필요함' 표시
   const a =  null + 7
