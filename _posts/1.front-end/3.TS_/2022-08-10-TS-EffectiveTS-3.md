@@ -146,20 +146,20 @@ async function apiCode() {
 - TS에서는 하나의 함수에 하나의 구현체만 허용 (타입 선언은 여러개 가능)
 - 함수 오버로딩: 매개변수만 다른 여러 버젼의 함수 사용
 
-```javascript
-// TS설정: {"noImplicitAny":false}
+  ```javascript
+  // TS설정: {"noImplicitAny":false}
 
-// 아래 두 줄은 컴파일 시에는 제거 됨
-function add(a: number, b: number): number
-function add(a: string, b: string): string
+  // 아래 두 줄은 컴파일 시에는 제거 됨
+  function add(a: number, b: number): number
+  function add(a: string, b: string): string
 
-function add(a, b) {
-  return a + b
-}
+  function add(a, b) {
+    return a + b
+  }
 
-const three = add(1, 2) // Type is number
-const twelve = add('1', '2') // Type is string
-```
+  const three = add(1, 2) // Type is number
+  const twelve = add('1', '2') // Type is string
+  ```
 
 ### **5. TS의 타입은 런타임 성능에 영향 없음**
 
