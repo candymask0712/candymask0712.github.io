@@ -30,7 +30,7 @@ last_modified_at:
 
 - 타입 관련 코드는 컴파일 시 제거 되 체크가 불가능
 
-  ```JavaScript
+  ```javascript
   // 타입 관련 내용은 컴파일 시 제거 됨 (interface, type 등)
   // (= 컴파일 된 JS 파일에는 존재하지 않게 됨)
   interface Square {
@@ -51,7 +51,7 @@ last_modified_at:
 
 - 만약 위 예시에서 타입 확인을 하고 싶다면 속성을 확인해야함
 
-  ```JavaScript
+  ```javascript
   (...)
   function calculateArea(shape: Shape) {
     // 해당 객체에 height라는 속성이 있는지 직접 확인
@@ -63,7 +63,7 @@ last_modified_at:
 
 - 런타임에 접근가능한 타입 정보를 저장하는 '태그' 기법
 
-  ```JavaScript
+  ```javascript
   interface Square {
     kind: 'square'
     (...)
@@ -90,7 +90,7 @@ last_modified_at:
 
 ### **3. 타입 연산은 런타임에 영향을 주지 않음**
 
-```JavaScript
+```javascript
 // (TS 코드)
 // Type Assertion 으로 반환되는 val의 타입을 숫자로 강제함
 // Type Assertion 설명 링크: https://radlohead.gitbook.io/typescript-deep-dive/type-system/type-assertion
@@ -112,31 +112,31 @@ function asNumber(val: number | string): number {
 
 ### **4. 런타임 타입은 선언 타입과 다를 수 있음**
 
-```JavaScript
+```javascript
 // 아래 함수는 파라미터가 boolean으로 들어옴
 // TS 자체로는 default 케이스로 넘어가는 경우가 없음
 function threeCase(value: boolean) {
   switch (value) {
     case true:
-      console.log('case: true')
-      break
+      console.log("case: true");
+      break;
     case false:
-      console.log('case: false')
-      break
+      console.log("case: false");
+      break;
     default:
-      console.log('case: default')
+      console.log("case: default");
   }
 }
 
 // 그러나 API 요청의 응답이 boolean이 아닐 경우
 // 예외적으로 default 케이스로 넘어갈 수도 있음
 interface ApiResponse {
-  value: boolean
+  value: boolean;
 }
 async function apiCode() {
-  const response = await fetch('/case')
-  const result: ApiResponse = await response.json()
-  threeCase(result.value)
+  const response = await fetch("/case");
+  const result: ApiResponse = await response.json();
+  threeCase(result.value);
 }
 ```
 
@@ -146,7 +146,7 @@ async function apiCode() {
 - TS에서는 하나의 함수에 하나의 구현체만 허용 (타입 선언은 여러개 가능)
 - 함수 오버로딩: 매개변수만 다른 여러 버젼의 함수 사용
 
-```JavaScript
+```javascript
 // TS설정: {"noImplicitAny":false}
 
 // 아래 두 줄은 컴파일 시에는 제거 됨
