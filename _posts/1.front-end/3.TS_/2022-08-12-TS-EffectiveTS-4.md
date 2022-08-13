@@ -68,54 +68,54 @@ last_modified_at:
   }
   ```
 
-  [덕 타이핑과 구조적 타이핑](https://vallista.kr/%EB%8D%95-%ED%83%80%EC%9D%B4%ED%95%91%EA%B3%BC-%EA%B5%AC%EC%A1%B0%EC%A0%81-%ED%83%80%EC%9D%B4%ED%95%91/)
+  [덕 타이핑과 구조적 타이핑 설명 링크](https://vallista.kr/%EB%8D%95-%ED%83%80%EC%9D%B4%ED%95%91%EA%B3%BC-%EA%B5%AC%EC%A1%B0%EC%A0%81-%ED%83%80%EC%9D%B4%ED%95%91/)
 
 ### **2. 클래스의 경우도 구조적 타이핑을 따름**
 
 - 클래스에 타입을 넣어 쓰는 경우에도 구조적 타이핑을 따름
 
-```javascript
-// 클래스 C (foo 변수와 method 메서드 가짐)
-class C {
-  foo: string;
-  constructor(foo: string) {
-    this.foo = foo;
+  ```javascript
+  // 클래스 C (foo 변수와 method 메서드 가짐)
+  class C {
+    foo: string;
+    constructor(foo: string) {
+      this.foo = foo;
+    }
+    method() {}
   }
-  method() {}
-}
-// 생성자 함수를 통해 인스턴스 c 생성
-// foo의 값으로 'instance of C'가 들어간 인스턴스
-const c = new C("instance of C");
+  // 생성자 함수를 통해 인스턴스 c 생성
+  // foo의 값으로 'instance of C'가 들어간 인스턴스
+  const c = new C("instance of C");
 
-// 타입 C를 따르는 객체 d를 생성
-// error. 'method' 속성이 '{ foo: string; }' 형식에 없지만 'C' 형식에서 필수입니다.
-const d: C = { foo: "object literal" };
+  // 타입 C를 따르는 객체 d를 생성
+  // error. 'method' 속성이 '{ foo: string; }' 형식에 없지만 'C' 형식에서 필수입니다.
+  const d: C = { foo: "object literal" };
 
-// 타입 C를 따르는 객체 e를 생성
-// foo, method 속성이 모두 있으면 okay.
-const e: C = { foo: "", method() {} };
+  // 타입 C를 따르는 객체 e를 생성
+  // foo, method 속성이 모두 있으면 okay.
+  const e: C = { foo: "", method() {} };
 
-class E {
-  method() {}
-}
-class D extends E {
-  foo: string;
-  constructor(foo: string) {
-    super();
-    this.foo = foo;
+  class E {
+    method() {}
   }
-}
-const f: C = new D(""); // prototype chain 상에 method가 존재하면 okay.
+  class D extends E {
+    foo: string;
+    constructor(foo: string) {
+      super();
+      this.foo = foo;
+    }
+  }
+  const f: C = new D(""); // prototype chain 상에 method가 존재하면 okay.
 
-const g = Object.create({ method() {} }, { foo: { value: "" } }); // g: any
-const h: C = g; // C type 강제(assert)하여 okay.
+  const g = Object.create({ method() {} }, { foo: { value: "" } }); // g: any
+  const h: C = g; // C type 강제(assert)하여 okay.
 
-const i: { foo: string, method: () => void } = Object.create(
-  { method() {} },
-  { foo: { value: "" } }
-);
-const j: C = i; // { foo, method } 타입을 강제하여 okay.
-```
+  const i: { foo: string, method: () => void } = Object.create(
+    { method() {} },
+    { foo: { value: "" } }
+  );
+  const j: C = i; // { foo, method } 타입을 강제하여 okay.
+  ```
 
 ### **3. 구조적 타이핑은 유닛 테스트 시에도 유용**
 

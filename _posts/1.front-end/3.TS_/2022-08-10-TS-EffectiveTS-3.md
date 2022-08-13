@@ -83,16 +83,13 @@ last_modified_at:
 
   - 태그된 유니온을 다른 표현으로 '서로소 유니온'으로도 부르고 있네요
   - 저에게는 의미도 잘 와닿고 좀 더 설명히 상세하여 첨부합니다
-    [서로소 유니온 타입](https://ahnheejong.gitbook.io/ts-for-jsdev/06-type-system-deepdive/disjoint-union-type)
-
-- 타입 연산은 런타임에 영향을 주지 않음
+    [서로소 유니온 타입 추가 설명 링크](https://ahnheejong.gitbook.io/ts-for-jsdev/06-type-system-deepdive/disjoint-union-type)
 
 ### **3. 타입 연산은 런타임에 영향을 주지 않음**
 
 ```javascript
 // (TS 코드)
 // Type Assertion 으로 반환되는 val의 타입을 숫자로 강제함
-// Type Assertion 설명 링크: https://radlohead.gitbook.io/typescript-deep-dive/type-system/type-assertion
 function asNumber(val: number | string): number {
   return val as number
 }
@@ -108,6 +105,8 @@ function asNumber(val: number | string): number {
   return Number(val)
 }
 ```
+
+[Type Assertion 추가 설명글 링크](https://radlohead.gitbook.io/typescript-deep-dive/type-system/type-assertion)
 
 ### **4. 런타임 타입은 선언 타입과 다를 수 있음**
 
@@ -163,6 +162,6 @@ async function apiCode() {
 ### **5. TS의 타입은 런타임 성능에 영향 없음**
 
 - 타입 코드는 트랜스파일링시 제거 => 성능과 무관
-- TS의 컴파일 속도는 상당히 빠른 편
-- 오버헤드가 커질 시 타입체크를 생략하고 트랜스파일만 하는 옵션도 존재
+- TS의 컴파일 속도는 상당히 빠른 편이나
+- 컴파일 오버헤드가 커질 시 타입체크를 생략하고 트랜스파일만 하는 옵션도 존재
 - 오버헤드: 어떤 처리에 드는 간접적 시간 및 메모리
