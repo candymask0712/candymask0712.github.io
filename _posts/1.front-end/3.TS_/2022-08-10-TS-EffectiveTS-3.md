@@ -8,7 +8,6 @@ categories:
   - TypeScript
 tags:
   - Effective TS
-  - tsconfig
 last_modified_at:
 ---
 
