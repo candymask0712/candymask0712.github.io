@@ -27,3 +27,6 @@ codekit-config.json
 .sass-cache
 _asset_bundler_cache
 _site
+
+# 템플릿
+2022-08-12-TS-EffectiveTS-템플릿.md
