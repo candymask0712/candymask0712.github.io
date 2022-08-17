@@ -74,7 +74,7 @@ last_modified_at:
   type NamedVariable = (Input | Output) & { name: string };
   ```
 - 튜플, 배열 타입도 타입 키워드로 간결하게 구현 가능
-
+- sadfasdfasdfsad
   ```javascript
   type test
   ```
