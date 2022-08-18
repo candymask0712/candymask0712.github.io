@@ -74,9 +74,34 @@ last_modified_at:
   type NamedVariable = (Input | Output) & { name: string };
   ```
 - 튜플, 배열 타입도 타입 키워드로 간결하게 구현 가능
-- alias 테스트임!!
   ```javascript
-  type test
+  // 타입 키워드로 선언시 튜플 간결하게 표현 가능
+  type Pair = [number, number]
+  type StringList = string[]
+  type NamedNums = [string, ...number[]]
+
+  // 인터페이스로도 튜플 비슷하게 구현 가능
+  interface Tuple {
+    0: number
+    1: number
+    length: 2
+  }
+  const t: Tuple = [10, 20] // OK
+  t.concat(t) // error
+  ```
+- 인터페이스는 보강(선언 병합)이 가능
+- 주로 타입 선언 파일에서 사용되며 TS 내부에서도 ES스펙 정의에 보강 사용
+  ```javascript
+  interface IState {
+    name: string
+  }
+  interface IState {
+    population: number
+  }
+  const wyoming: IState = {
+    name: 'Wyoming',
+    population: 500_000,
+  } // OK
   ```
 
 ### **3.**
