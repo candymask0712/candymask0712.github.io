@@ -22,7 +22,7 @@ last_modified_at:
 - 컴포넌트 return 부분(JSX)에서는 if문 사용 불가
 - 분기에 따라 원하는 element 전체 return 필요
  
-  ```Javascript
+  ```javascript
   // JSX에서의 분기 예시
   function Component() {
     if ( true ) {
@@ -47,7 +47,7 @@ last_modified_at:
   `조건문 ? 조건문 참일때 실행할 코드 : 거짓일 때 실행할 코드`  
 - JSX 안에서도 실행가능하며 (간단한 조건 시 유용)
 
-  ```Javascript
+  ```javascript
   function Component() {
     return (
       <div>
@@ -67,7 +67,7 @@ last_modified_at:
 - &&(논리곱 연산자, 두 개의 앰퍼샌트를 사용)
 - 참이면 '원하는 값' 아니라면 'null' 반환 시에 유용
  
-  ```Javascript
+  ```javascript
   function Component() {
     return (
       <div>
@@ -94,7 +94,7 @@ last_modified_at:
 - if문이 중첩해서 여러개 달려있는 경우에 사용
 - 조건식란에서 변수하나만 검사할 수 있다는게 단점
  
-  ```Javascript
+  ```javascript
   // 일반적인 if문 사용시 다양한 분기 예시
   function Component2(){
     var user = 'seller';
@@ -130,7 +130,7 @@ last_modified_at:
 - 경우에 따라 다른 HTML을 보여주고 싶을 때 사용
 - 삼항 연산자보다 더 많은 분기처리가 필요할 때 로직을 직관적으로 보여줌
 
-  ```Javascript
+  ```javascript
   var 탭UI = { 
     info : <p>상품정보</p>,
     shipping : <p>배송관련</p>,
