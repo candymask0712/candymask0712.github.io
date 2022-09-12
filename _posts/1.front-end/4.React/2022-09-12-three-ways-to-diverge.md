@@ -9,50 +9,45 @@ categories:
 tags:
   - Diverge
   - if
-
-
-
 last_modified_at:
 ---
 
-## **1. 가볍고 편한 상태관리 라이브러리 Zustand**
+## **1. 리액트에서 자주쓰는 if문 작성패턴 5개**
 
+회사에서 코드 작성을 하면서 삼항 연산자로 인해 코드 가독성이 떨어져 고민이 되었다.  
+마침 경우에 따라 유용한 if문 작성 패턴 영상이 있어 내용을 정리해 보았다.
 
-
-'리액트에서 자주쓰는 if문 작성패턴 5개'
-
-## 1. 컴포넌트 안에서 쓰는 if/else
+### 1. 컴포넌트 안에서 쓰는 if/else
 
 - 컴포넌트 return 부분(JSX)에서는 if문 사용 불가
 - 분기에 따라 원하는 element 전체 return 필요
  
-```javascript
-
-// JSX에서의 분기 예시
-function Component() {
-  if ( true ) {
-    return <p>참이면 보여줄 HTML</p>;
-  } else {
-    return null;
-  }
-} 
-
-// return을 정확히 사용 시 else 생략 가능
-function Component() {
-  if ( true ) {
-    return <p>참이면 보여줄 HTML</p>;
+  ```Javascript
+  // JSX에서의 분기 예시
+  function Component() {
+    if ( true ) {
+      return <p>참이면 보여줄 HTML</p>;
+    } else {
+      return null;
+    }
   } 
-  return null;
-} 
-```
+
+  // return을 정확히 사용 시 else 생략 가능
+  function Component() {
+    if ( true ) {
+      return <p>참이면 보여줄 HTML</p>;
+    } 
+    return null;
+  } 
+  ```
 
 ### 2. JSX안에서 쓰는 삼항연산자 
 
 - 삼항 연산자(ternary operator)방식
-  `조건문 ? 조건문 참일때 실행할 코드 : 거짓일 때 실행할 코드`
+  `조건문 ? 조건문 참일때 실행할 코드 : 거짓일 때 실행할 코드`  
 - JSX 안에서도 실행가능하며 (간단한 조건 시 유용)
 
-  ```JavaScript
+  ```Javascript
   function Component() {
     return (
       <div>
@@ -72,7 +67,7 @@ function Component() {
 - &&(논리곱 연산자, 두 개의 앰퍼샌트를 사용)
 - 참이면 '원하는 값' 아니라면 'null' 반환 시에 유용
  
-  ```JavaScript
+  ```Javascript
   function Component() {
     return (
       <div>
@@ -99,7 +94,7 @@ function Component() {
 - if문이 중첩해서 여러개 달려있는 경우에 사용
 - 조건식란에서 변수하나만 검사할 수 있다는게 단점
  
-  ```JavaScript
+  ```Javascript
   // 일반적인 if문 사용시 다양한 분기 예시
   function Component2(){
     var user = 'seller';
@@ -135,7 +130,7 @@ function Component() {
 - 경우에 따라 다른 HTML을 보여주고 싶을 때 사용
 - 삼항 연산자보다 더 많은 분기처리가 필요할 때 로직을 직관적으로 보여줌
 
-  ```JavaScript
+  ```Javascript
   var 탭UI = { 
     info : <p>상품정보</p>,
     shipping : <p>배송관련</p>,
@@ -153,3 +148,4 @@ function Component() {
     )
   } 
   ```
+  [출처-코딩애플 리액트 강의(유료)](https://codingapple.com/)
