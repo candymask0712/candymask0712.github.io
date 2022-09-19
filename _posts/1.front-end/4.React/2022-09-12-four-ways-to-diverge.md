@@ -134,7 +134,7 @@ last_modified_at:
   var 탭UI = { 
     info : <p>상품정보</p>,
     shipping : <p>배송관련</p>,
-    refund : <p>환불약관</p>
+    refund : <p>환불약관</p>∆∆∆
   }
 
   function Component() {
@@ -148,4 +148,3 @@ last_modified_at:
     )
   } 
   ```
-  [출처-코딩애플 리액트 강의(유료)](https://codingapple.com/)
