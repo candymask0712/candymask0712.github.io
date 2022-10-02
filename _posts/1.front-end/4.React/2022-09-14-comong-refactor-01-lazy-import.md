@@ -1,5 +1,5 @@
 ---
-title: "[React] lazy-import"
+title: "[React] 토이 프로젝트 개선기 01. 코드 스플리팅"
 excerpt:
 toc: true
 toc_sticky: true
