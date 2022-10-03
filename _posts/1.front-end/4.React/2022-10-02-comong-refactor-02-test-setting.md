@@ -67,11 +67,11 @@ npm run test
 ![](https://user-images.githubusercontent.com/86667412/193461320-ff827fd3-9618-4104-ae37-c64dc1b6dea5.png)
 
 메세지의 내용은 컴포넌트가 `Provider`로 감싸져 있어야 한다는 내용이고  
-검색을 해보아도 주로 같은 내용에 대한 답변이 달려 있었다.
+검색을 해보아도 주로 같은 내용에 대한 답변이 달려 있었다.  
 그러나 해당 프로젝트에서는 `App` 컴포넌트를 `Provider`로 잘 감싸고 있는 구조였기에 당황스러웠다.
 
-그러나 결국 문제는 구현 코드가 아닌 테스트코드에서 Wrapping이 되어 있어야 하는 것이었다.
-그래서 index.tsx 와 동일하게 환경을 구성하기 위해, test 코드에서도 동일하게 Wrapping 해주었다.
+그러나 결국 문제는 구현 코드가 아닌 테스트코드에서 Wrapping이 되어 있어야 하는 것이었다.  
+그래서 index.tsx 와 동일하게 환경을 구성하기 위해, test 코드에서도 동일하게 Wrapping 해주었다.  
 
 ```javascript
 // (App.test.tsx)
@@ -97,7 +97,7 @@ Error: Not implemented: window.scrollTo
 ```
 ![](https://user-images.githubusercontent.com/86667412/193461762-e2b51b40-6c8e-4563-bf0a-52845b2827df.png)
 
-아래와 같이 `scrollTo` 에 대한 내용을 `setupTests.ts` 에 추가함으로써 해결하였다 
+아래와 같이 `scrollTo` 에 대한 내용을 `setupTests.ts` 에 추가함으로써 해결하였다.   
 
 ```javascript
 // (setupTests.ts)
