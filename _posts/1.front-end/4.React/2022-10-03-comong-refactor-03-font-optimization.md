@@ -1,5 +1,5 @@
 ---
-title: "[React] 토이 프로젝트 개선기 02. 테스팅 환경 설정 (에러 핸들링)"
+title: "[React] 토이 프로젝트 개선기 03. 테스팅 도입"
 excerpt:
 toc: true
 toc_sticky: true
