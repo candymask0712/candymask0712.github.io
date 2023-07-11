@@ -41,7 +41,7 @@ To resolve this only create new StyledComponents outside of any render method an
 
 아래에 관련 글들을 보고 `sc-jKTccl` 라이브러리 내부에서 MurmurHash 알고리즘을 통해 생성한 id값이라는 것을 알게 되었다  
 이 id값은 랜더링 시 hasing이 이루어져서 작성한 코드에서는 확인이 불가능 하다고 한다  
-아쉽게도 따로 id를 이용해 따로 검색하는 기능은 없고
+아쉽게도 따로 id를 이용해 따로 검색하는 기능은 없음
 
 - 에러메세지의 발생 위치로 가거나
 - 개발자 도구에서 어느정도 해당위치를 알때 디렉토리에서 찾아야 하는 듯하다
