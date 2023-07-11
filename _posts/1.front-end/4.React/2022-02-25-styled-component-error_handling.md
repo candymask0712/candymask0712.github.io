@@ -44,7 +44,7 @@ To resolve this only create new StyledComponents outside of any render method an
 아쉽게도 따로 id를 이용해 따로 검색하는 기능은 없음
 
 - 에러메세지의 발생 위치로 가거나
-- 개발자 도구에서 어느정도 해당위치를 알때 디렉토리에서 찾아야 하는 듯하다
+- 개발자 도구에서 어느정도 해당위치를 알때 디렉토리에서 찾아야 하는 듯
 
 [스택오버플로우 글](https://stackoverflow.com/questions/59961697/random-classes-getting-displayed-when-we-use-styled-components)  
 [관련 블로그 글](https://john015.netlify.app/styled-components%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EB%8F%99%EC%9E%91%ED%95%A0%EA%B9%8C#styled-components%EC%9D%98-%EB%82%B4%EB%B6%80-%EB%8F%99%EC%9E%91%EC%9B%90%EB%A6%AC)
